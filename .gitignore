@@ -8,14 +8,19 @@ dist/
 .vite/
 .astro/
 
-# Docker
-Dockerfile
-docker-compose.yml
+# Meta
+SPEC.md
+docker-entrypoint.sh
+watchdog_port.txt
 watchdog.sh
 watchdog_astro.py
 watchdog-host.ps1
 
-# Windows scripts (not needed on Cloudflare)
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Windows scripts
 *.bat
 iniciar.ps1
 crear_icono.ps1
