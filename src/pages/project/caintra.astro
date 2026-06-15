@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="en" title="Caintra">
+  <section class="project-hero"><div class="hero-bg" style="background-image:url('/projects/caintra/Slider-Designer-powerPoint-1.webp')"></div><div class="hero-overlay"></div>
+    <div class="container"><div class="hero-content"><a href="/#results" class="back-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</a><h1 class="project-title">Caintra</h1><p class="project-tagline">Corporate design system</p><p class="project-context">Industrial / B2B — Mexico</p></div></div>
+  </section>
+  <section class="project-section"><div class="container"><span class="section-label-text"><i>01</i> Problem</span><p class="project-body">The association needed to modernize its visual communication without losing institutional credibility. Each department used different formats. No unified visual criteria.</p></div></section>
+  <section class="project-section-alt"><div class="container"><span class="section-label-text"><i>02</i> System</span><p class="project-body">Modular system: slides, app, manuals, web with reusable templates. Designed for non-designers to use effectively.</p></div></section>
+  <section class="project-gallery"><div class="container"><div class="project-grid-3">{[1,2,3,4,5,6,7,8,9].map(n => <img src={`/projects/caintra/Slider-Designer-powerPoint-${n}.webp`}/>)}</div></div></section>
+  <section class="project-result"><div class="container"><div class="result-box"><h2>Result</h2><p>Estimated 50% reduction in material production time. Cross-channel visual consistency.</p></div></div></section>
+</BaseLayout>

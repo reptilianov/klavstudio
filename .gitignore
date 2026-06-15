@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Cache
+.vite/
+.astro/
+
+# Docker
+Dockerfile
+docker-compose.yml
+watchdog.sh
+watchdog_astro.py
+watchdog-host.ps1
+
+# Windows scripts (not needed on Cloudflare)
+*.bat
+iniciar.ps1
+crear_icono.ps1
+
+# Old WordPress files
+viejo/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.*.local

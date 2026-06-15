@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="es" title="1st Choice CE">
+  <section class="project-hero">
+    <div class="hero-bg" style="background-image:url('/projects/firstchoice/1ST-CHOICE-2048x1177.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <a href="/es/#results" class="back-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Volver</a>
+        <h1 class="project-title">1st Choice CE</h1>
+        <p class="project-tagline">Sistema de identidad para plataforma educativa en línea</p>
+        <p class="project-context">Educación / Aprendizaje en línea — USA</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container"><span class="section-label-text"><i>01</i> Problema</span><p class="project-body">Tenían cursos de calidad pero su presencia visual no comunicaba profesionalismo. Necesitaban transmitir credibilidad académica sin parecer rígidos. Los estudiantes abandonaban antes de inscribirse por desconfianza visual. La plataforma necesitaba diferenciarse en un mercado educativo saturado.</p></div>
+  </section>
+
+  <section class="project-section-alt">
+    <div class="container"><span class="section-label-text"><i>02</i> Sistema y Enfoque</span><p class="project-body">Sistema de identidad completo con paleta de color que balancea autoridad y cercanía. Mejora en jerarquía de información de cursos. Sistema profesional enfatizando credibilidad y confianza en el espacio educativo en línea.</p><div class="project-approach"><h4>Enfoque</h4><p>Sistema de color estructurado para jerarquía clara de información en materiales de curso. Balance entre seriedad académica y accesibilidad visual.</p></div></div>
+  </section>
+
+  <section class="project-gallery">
+    <div class="container">
+      <div class="project-colors"><div class="row" style="display:flex;flex-wrap:wrap;gap:8px;">
+        {[
+          {bg:'#0C395A',c:'white'},{bg:'#1975C2',c:'white'},{bg:'#54A3FF',c:'white'},{bg:'#C1E2FF',c:'black'},
+          {bg:'#10232A',c:'white'},{bg:'#1E3740',c:'white'},{bg:'#2B4A56',c:'white'},{bg:'#647C86',c:'white'},
+          {bg:'#9DAFB5',c:'white'},{bg:'#EEF7FB',c:'black'},{bg:'#2B8842',c:'white'},{bg:'#46D761',c:'black'},
+          {bg:'#53FF71',c:'black'},{bg:'#9effae',c:'black'}
+        ].map(c => <div class="ColorSample p-3" style={`background:${c.bg};min-width:120px;flex:1`}><p style={`color:${c.c};margin:0;font-family:monospace;font-size:0.8rem`}>{c.bg}</p></div>)}
+      </div></div>
+    </div>
+  </section>
+
+  <section class="project-result"><div class="container"><div class="result-box"><h2>Resultado</h2><p>Mejora en percepción de marca. Sistema de color escalable a nuevos cursos y materiales. Reducción estimada de abandono en páginas de curso por claridad visual. Presencia visual profesional que refleja la calidad del contenido educativo.</p></div></div></section>
+  <section class="project-section"><div class="container"><span class="section-label-text"><i>03</i> Aprendizajes</span><p class="project-body">Las marcas educativas necesitan balancear seriedad académica con calidez visual. El sistema de color fue el diferenciador clave que permitió escalar a nuevos cursos sin perder identidad.</p></div></section>
+</BaseLayout>

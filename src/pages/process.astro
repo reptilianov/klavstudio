@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getTranslations } from '../i18n';
+
+const t = getTranslations('en');
+---
+
+<BaseLayout locale="en" title="Process">
+  <section class="page-hero"><div class="container"><h1>{t.process.title}</h1><p class="page-intro">{t.process.intro}</p></div></section>
+  <section class="process-detail">
+    <div class="container">
+      {t.process.stages.map((stage: any, i: number) => (
+        <div class="process-block scroll-fade" style={`transition-delay: ${i * 0.1}s`}>
+          <div class="process-header"><span class="process-number">{stage.step}</span><h2>{stage.name}</h2></div>
+          <p class="process-desc">{stage.desc}</p>
+          <div class="process-details"><div class="process-client"><h4>Your role</h4><p>{stage.client}</p></div></div>
+        </div>
+      ))}
+    </div>
+  </section>
+  <section class="page-cta"><div class="container"><h2>{t.contact.title}</h2><p>{t.contact.intro}</p><a href="mailto:hello@klav.design" class="btn">{t.contact.emailLabel}</a></div></section>
+</BaseLayout>

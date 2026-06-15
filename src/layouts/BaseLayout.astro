@@ -1,0 +1,116 @@
+---
+import '../styles/global.css';
+import { getTranslations } from '../i18n';
+
+interface Props {
+	locale: 'en' | 'es';
+	title?: string;
+	description?: string;
+}
+
+const { locale, title, description } = Astro.props;
+const t = getTranslations(locale);
+
+const allKeys = [
+	'okhosting', 'firstchoice', 'caintra', 'airtm',
+	'mindsherpa', 'titos', 'steps', 'artearabia', 'babilonia',
+];
+const projectKeys = allKeys.sort(
+	(a, b) => (t.projects.weight[b] || 0) - (t.projects.weight[a] || 0),
+);
+
+const basePath = locale === 'en' ? '' : '/es';
+const servicesPath = locale === 'en' ? '/services' : '/es/servicios';
+const processPath = locale === 'en' ? '/process' : '/es/proceso';
+const aboutPath = locale === 'en' ? '/about' : '/es/sobre-mi';
+const contactPath = locale === 'en' ? '/contact' : '/es/contacto';
+const siteDescription = description || (locale === 'en'
+	? 'Brand, UX and digital interface designer expanding into software, functional prototyping and applied AI.'
+	: 'Diseñador de marca, UX e interfaces digitales expandiéndose hacia software, prototipado funcional e IA aplicada.');
+
+const fullTitle = title
+	? `${title} | KLAV`
+	: `KLAV — ${locale === 'en' ? 'Brand Design, UX/UI & Digital Product' : 'Diseño de Marca, UX/UI y Producto Digital'}`;
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={siteDescription} />
+		<meta property="og:title" content={fullTitle} />
+		<meta property="og:description" content={siteDescription} />
+		<meta property="og:type" content="website" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="alternate" hreflang="en" href="https://klav.design/" />
+		<link rel="alternate" hreflang="es" href="https://klav.design/es/" />
+		<title>{fullTitle}</title>
+	</head>
+
+	<body>
+		<nav class="nav">
+			<div class="container nav-inner">
+				<a href={basePath || '/'} class="logo">KLAV</a>
+				<div class="nav-links">
+					<div class="nav-dropdown">
+						<span class="nav-link nav-dropdown-trigger">{locale === 'en' ? 'Projects' : 'Proyectos'}
+							<svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none">
+								<path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5"/>
+							</svg>
+						</span>
+						<div class="nav-dropdown-menu">
+							{projectKeys.map((key) => (
+								<a href={`/${locale === 'en' ? 'project' : 'es/project'}/${key}`} class="dropdown-item">
+									{t.projects[key]?.title}
+								</a>
+							))}
+						</div>
+					</div>
+					<a href={locale === 'en' ? '/services' : '/es/servicios'} class="nav-link">{locale === 'en' ? 'Services' : 'Servicios'}</a>
+					<a href={locale === 'en' ? '/process' : '/es/proceso'} class="nav-link">{locale === 'en' ? 'Process' : 'Proceso'}</a>
+					<a href={locale === 'en' ? '/about' : '/es/sobre-mi'} class="nav-link">{locale === 'en' ? 'About' : 'Quién soy'}</a>
+					<a href={`mailto:hello@klav.design`} class="nav-link">{locale === 'en' ? 'Contact' : 'Contacto'}</a>
+					<a href={locale === 'en' ? '/es' : '/'} class="nav-link lang-switch">{locale === 'en' ? 'ES' : 'EN'}</a>
+				</div>
+			</div>
+		</nav>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; {new Date().getFullYear()} KLAV. {t.site.tagline}.</p>
+				<div class="footer-links">
+					<a href={t.contact.behanceUrl} target="_blank">Behance</a>
+					<a href={t.contact.dribbbleUrl} target="_blank">Dribbble</a>
+					<a href={t.contact.linkedinUrl} target="_blank">LinkedIn</a>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			function initAnimations() {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add('visible');
+							}
+						});
+					},
+					{ threshold: 0.1, rootMargin: '0px 0px -50px 0px' },
+				);
+				document
+					.querySelectorAll('.scroll-fade, .text-reveal')
+					.forEach((el) => {
+						observer.observe(el);
+					});
+			}
+			initAnimations();
+		</script>
+	</body>
+
+</html>

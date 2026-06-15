@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+export function getStaticPaths() { return []; }
+const slug = Astro.params.slug as string;
+---
+
+<BaseLayout locale="en" title={slug}>
+  <section class="project-hero">
+    <div class="hero-bg" style="background:#0a0a0a"></div>
+    <div class="container" style="position:relative;z-index:2;padding-top:6rem;">
+      <a href="/#results" class="back-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Results</a>
+      <h1 class="project-title">{slug}</h1>
+      <p class="project-tagline">Project details coming soon.</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="es" title="Caintra Nuevo León">
+  <section class="project-hero">
+    <div class="hero-bg" style="background-image:url('/projects/caintra/Slider-Designer-powerPoint-1.webp')"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <a href="/es/#results" class="back-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Volver</a>
+        <h1 class="project-title">Caintra Nuevo León</h1>
+        <p class="project-tagline">Sistema de diseño corporativo para asociación industrial</p>
+        <p class="project-context">Institucional / Industrial / B2B — México</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container"><span class="section-label-text"><i>01</i> Problema</span><p class="project-body">La asociación necesitaba modernizar su comunicación visual sin perder credibilidad institucional. Cada área usaba formatos distintos para presentaciones, materiales impresos, app y web. No había criterios visuales unificados. El equipo necesitaba poder producir materiales sin depender de un diseñador.</p></div>
+  </section>
+
+  <section class="project-section-alt">
+    <div class="container"><span class="section-label-text"><i>02</i> Sistema y Enfoque</span><p class="project-body">Sistema modular de slides, paleta corporativa expandida, diseño de app manteniendo jerarquía institucional, manuales visuales claros. Se diseñaron slides de presentación corporativa, la App Caintra Grow y el Manual Caintra Grow.</p><div class="project-approach"><h4>Enfoque</h4><p>Sistema modular que personas sin formación en diseño pudieran usar efectivamente. Plantillas reutilizables como entregables esenciales.</p></div></div>
+  </section>
+
+  <section class="project-gallery">
+    <div class="container">
+      <span class="section-label-text mb-4"><i>01</i> Slides de Presentación</span>
+      <div class="project-grid-3">{[1,2,3,4,5,6,7,8,9].map(n => <img src={`/projects/caintra/Slider-Designer-powerPoint-${n}.webp`} alt={`Slide ${n}`}/>)}</div>
+      <span class="section-label-text mb-4 mt-5"><i>02</i> App Móvil</span>
+      <div class="project-grid-4">{[1,2,3,4].map(n => <img src={`/projects/caintra/cel-${n}.webp`} alt={`App ${n}`}/>)}</div>
+      <span class="section-label-text mb-4 mt-5"><i>03</i> Manual Corporativo</span>
+      <div class="project-grid-2"><img src="/projects/caintra/magazine-corporativeBrochure.jpg" alt="Manual"/><img src="/projects/caintra/magazine-corporativeBrochure-2.jpg" alt="Manual 2"/></div>
+    </div>
+  </section>
+
+  <section class="project-result"><div class="container"><div class="result-box"><h2>Resultado</h2><p>Reducción estimada del 50% en tiempo de producción de materiales gracias a las plantillas modulares. Consistencia visual lograda en todos los canales: presentaciones, app, manuales impresos y web.</p></div></div></section>
+  <section class="project-section"><div class="container"><span class="section-label-text"><i>03</i> Aprendizajes</span><p class="project-body">El diseño B2B e institucional requiere contención. El sistema debía funcionar para no-diseñadores. Las plantillas y manuales no fueron un extra, fueron el entregable principal.</p></div></section>
+</BaseLayout>

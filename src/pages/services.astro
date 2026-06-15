@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getTranslations } from '../i18n';
+
+const t = getTranslations('en');
+---
+
+<BaseLayout locale="en" title="Services">
+  <section class="page-hero"><div class="container"><h1>{t.services.title}</h1><p class="page-intro">{t.services.intro}</p></div></section>
+  <section class="services-detail">
+    <div class="container">
+      {t.services.items.map((svc: any, i: number) => (
+        <div class="service-block scroll-fade" style={`transition-delay: ${i * 0.1}s`}>
+          <div class="service-header"><span class="service-number">0{i + 1}</span><h2>{svc.name}</h2></div>
+          <p class="service-short">{svc.short}</p>
+          <span class="service-price-block">{svc.price}</span>
+          <p class="service-desc">{svc.description}</p>
+          <div class="service-details">
+            <div class="service-includes"><h4>What's included</h4><ul>{svc.includes.map((item: string) => <li>{item}</li>)}</ul></div>
+            <div class="service-meta"><p>{svc.for}</p></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+  <section class="page-cta"><div class="container"><h2>{t.contact.title}</h2><p>{t.contact.intro}</p><a href="mailto:hello@klav.design" class="btn">{t.services.cta}</a></div></section>
+</BaseLayout>

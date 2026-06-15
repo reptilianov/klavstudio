@@ -1,0 +1,172 @@
+{
+  "site": {
+    "name": "KLAV",
+    "tagline": "Fast, secure, easy-to-maintain websites"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "results": "Results",
+    "process": "Process",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Your slow or broken site is costing you clients. I fix it.",
+    "subtitle": "Free 15-minute audit. I review your site, tell you what's wrong, and how much it costs to fix. No strings attached.",
+    "cta": "Get my free audit"
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Three ways to solve real problems. No packages, no fluff.",
+    "items": [
+      {
+        "name": "Technical Audit + Fix",
+        "short": "I review your site, find what's making it slow or insecure, and fix it.",
+        "description": "Ideal if your site works but something feels off: it's slow, has errors, went down, fails speed tests. I run a full diagnostic and apply the necessary fixes. You get a report of what I did and why.",
+        "includes": ["Speed review (Core Web Vitals)", "Error and conflict detection", "Correction of findings", "Final report with actions and recommendations"],
+        "price": "From $450 USD",
+        "for": "Businesses with WordPress or similar sites needing technical fixes without a full redesign."
+      },
+      {
+        "name": "WordPress Migration",
+        "short": "Your current site is too bloated or hard to maintain. I move it to lighter, faster technology.",
+        "description": "If your WordPress has too many plugins, bloated themes, or was hacked, migrating to a modern stack (Astro, static HTML, or a lightweight setup) can reduce hosting costs, improve speed, and eliminate most vulnerabilities. I analyze your site, recommend the best option, and execute the migration.",
+        "includes": ["Current site analysis", "Target technology recommendation", "Full content and design migration", "Before/after speed tests", "Delivery with documentation"],
+        "price": "From $950 USD",
+        "for": "Businesses with bloated, slow or vulnerable WordPress wanting something faster and easier to maintain."
+      },
+      {
+        "name": "Website from Scratch",
+        "short": "You don't have a site or your current one no longer works. I build it from strategy to launch.",
+        "description": "Complete design and development of corporate sites, landing pages, or service websites. Includes content structure, visual design, development, and launch. Built with Astro, modern HTML/CSS, and tools that guarantee speed and low maintenance.",
+        "includes": ["Goals and structure definition", "Visual design (Figma)", "Development (Astro, HTML/CSS)", "Speed optimization and basic SEO", "Launch and delivery"],
+        "price": "From $1,200 USD",
+        "for": "Businesses, professionals, or startups needing web presence from scratch without depending on WordPress."
+      }
+    ],
+    "cta": "Request free audit"
+  },
+  "results": {
+    "title": "Real results",
+    "intro": "Projects where I solved concrete problems — not where I made pretty things.",
+    "items": [
+      {
+        "client": "OK Hosting — Technology & hosting company",
+        "problem": "Their site hadn't had a real overhaul in 8 years. Sections added without criteria. Confusing navigation. Diluted brand. Competing against Neubox and Xpress but their site didn't reflect it.",
+        "result": "Complete site restructuring, new visual identity, improved information architecture. The site went from a cluttered catalog to a clear IT services platform. The company expanded into cybersecurity and AI with a solid visual foundation.",
+        "metrics": "Full redesign with estimated 40-60% improvement in perceived navigation speed. Reduction in support tickets due to user confusion."
+      },
+      {
+        "client": "Caintra Nuevo León — Industrial association",
+        "problem": "Inconsistent visual communication across presentations, mobile app, print manuals and web. Each department used different formats. No unified visual criteria.",
+        "result": "Modular design system working across presentations, app, manuals and web. Reusable templates anyone on the team can use without design knowledge.",
+        "metrics": "Estimated 50% reduction in material production time thanks to templates. Visual consistency achieved across all channels."
+      },
+      {
+        "client": "1st Choice CE — Online education platform",
+        "problem": "They had quality courses but their visual presence didn't communicate professionalism. Needed to convey academic credibility without appearing rigid. Students dropped off before enrolling due to visual distrust.",
+        "result": "Complete identity system with a color palette balancing authority and approachability. Improved information hierarchy for courses. Professional visual presence reflecting content quality.",
+        "metrics": "Brand perception improvement. Scalable color system for new courses and materials. Estimated reduction in course page drop-off due to visual clarity."
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "headline": "Designer who also codes. Not the other way around.",
+    "body1": "I'm César Fernando. I started in design in 2007. Since then I've worked with companies, startups and teams in Mexico, Europe and the US. I've done branding, web design, UX/UI and visual systems.",
+    "body2": "In recent years I started studying software. Not to switch careers. To close the gap between designing something and making sure it works well, loads fast, and is easy to maintain.",
+    "body3": "Today I can audit your site, find what's making it slow, fix it, and if needed, rebuild it with lighter technology. All with visual judgment and without selling you hype.",
+    "body4": "I'm not an agency. I'm not a NASA senior engineer. I'm someone who understands how a site looks and how it works, and tells you the truth about what your project needs.",
+    "tools": "Astro, HTML/CSS, React, Node.js, Python, Figma, Git. I use AI as an acceleration tool, not as a replacement for judgment."
+  },
+  "process": {
+    "title": "How I work",
+    "intro": "No magic. Four steps.",
+    "stages": [
+      {
+        "step": "01",
+        "name": "Diagnosis",
+        "desc": "I review your current site or your needs. I detect speed, security, usability or structure issues. I tell you what I find and what can be done.",
+        "client": "You tell me what worries you about your site. I review and give you a clear diagnosis."
+      },
+      {
+        "step": "02",
+        "name": "Proposal",
+        "desc": "I present what needs to be done, how much it costs, and how long it takes. No surprises. No fine print.",
+        "client": "You review the proposal, ask questions, and decide if we move forward."
+      },
+      {
+        "step": "03",
+        "name": "Build",
+        "desc": "Design, development, migration or fixes as agreed. I keep you updated on progress. I test before delivering.",
+        "client": "You see progress, test, request adjustments if something doesn't work for you."
+      },
+      {
+        "step": "04",
+        "name": "Delivery",
+        "desc": "I deliver your working site with clear documentation. I explain how to maintain it or we arrange periodic follow-up.",
+        "client": "You receive your ready site with clear instructions. If you need later adjustments, we handle them."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's start?",
+    "intro": "You don't need a perfect brief. Send me an email with what worries you about your site and I'll review it. The first 15-minute audit is free.",
+    "email": "hello@klav.design",
+    "emailLabel": "Email me",
+    "behance": "Behance",
+    "behanceUrl": "https://www.behance.net/cesarfernando",
+    "linkedin": "LinkedIn",
+    "linkedinUrl": "https://www.linkedin.com/in/c%C3%A9sar-fernando-p%C3%A9rez-velasco-49b0492b/"
+  },
+  "projects": {
+    "weight": {
+      "okhosting": 90,
+      "firstchoice": 80,
+      "caintra": 70,
+      "mindsherpa": 60,
+      "titos": 50,
+      "airtm": 40,
+      "artearabia": 30,
+      "babilonia": 20,
+      "steps": 10
+    },
+    "okhosting": {
+      "title": "OK Hosting",
+      "tagline": "From hosting provider to technology brand",
+      "problem": "OK Hosting was perceived as a commodity hosting provider. It needed to reposition as a technology company offering hosting, software, IT management, cybersecurity and AI.",
+      "system": "Complete rebranding: new brand identity, website design, UX/UI process. Competitive benchmark, user personas, restructured information architecture.",
+      "result": "A memorable identity positioning OK Hosting as a full-spectrum technology company. Clear foundation for future service expansion.",
+      "context": "Technology / Hosting / IT Services — Mexico",
+      "approach": "Competitive benchmark, user personas, reorganized architecture, bold new visual identity.",
+      "learnings": "Rebranding a legacy company requires aligning internal stakeholders before touching design."
+    },
+    "firstchoice": {
+      "title": "1st Choice CE",
+      "tagline": "Identity system for education platform",
+      "problem": "Education platform needed visual credibility and market differentiation.",
+      "system": "Complete identity system, professional color palette, clear hierarchy for course materials.",
+      "result": "Brand perception improvement. Scalable system for new courses.",
+      "context": "Education / Online Learning — USA",
+      "approach": "Color system for clear information hierarchy.",
+      "learnings": "Education brands need to balance academic seriousness with warmth."
+    },
+    "caintra": {
+      "title": "Caintra Nuevo León",
+      "tagline": "Corporate design system",
+      "problem": "Inconsistent visual communication across digital and print formats.",
+      "system": "Modular system: slides, app, manuals, web with reusable templates.",
+      "result": "Estimated 50% reduction in material production time. Cross-channel visual consistency.",
+      "context": "Institutional / Industrial / B2B — Mexico",
+      "approach": "Modular system usable by non-designers.",
+      "learnings": "B2B design requires restraint and clear systems for non-designers."
+    },
+    "airtm": { "title": "Air TM", "tagline": "Financial platform UX", "problem": "", "system": "", "result": "", "context": "Finance / LATAM", "approach": "", "learnings": "" },
+    "mindsherpa": { "title": "MindSherpa", "tagline": "Editorial system", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" },
+    "titos": { "title": "Tito's Buckles", "tagline": "Craft brand", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" },
+    "steps": { "title": "Steps", "tagline": "Pedicure branding", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" },
+    "artearabia": { "title": "Arte Arabia", "tagline": "Cultural platform", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" },
+    "babilonia": { "title": "Babilonia", "tagline": "Cultural venue", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" }
+  }
+}

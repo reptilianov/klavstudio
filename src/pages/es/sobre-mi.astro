@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../i18n';
+
+const t = getTranslations('es');
+---
+
+<BaseLayout locale="es" title="Quién soy">
+  <section class="page-hero">
+    <div class="container">
+      <h1>{t.about.headline}</h1>
+    </div>
+  </section>
+  <section class="about-content">
+    <div class="container">
+      <div class="about-bio scroll-fade">
+        <p>{t.about.body1}</p>
+        <p>{t.about.body2}</p>
+        <p>{t.about.body3}</p>
+        <p>{t.about.body4}</p>
+      </div>
+      <div class="about-tools scroll-fade">
+        <h2>Con qué trabajo</h2>
+        <p>{t.about.tools}</p>
+      </div>
+      <div class="about-cta">
+        <a href="mailto:hello@klav.design" class="btn">{t.contact.emailLabel}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
