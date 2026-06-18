@@ -1,181 +1,243 @@
 {
-  "site": {
-    "name": "KLAV",
-    "tagline": "Sitios rápidos, seguros y fáciles de mantener"
-  },
-  "nav": {
-    "home": "Inicio",
-    "services": "Servicios",
-    "results": "Resultados",
-    "process": "Proceso",
-    "about": "Quién soy",
-    "contact": "Contacto"
-  },
-  "hero": {
-    "headline": "Tu sitio lento o caído te está costando clientes. Yo lo arreglo.",
-    "subtitle": "Auditoría gratuita de 15 minutos. Reviso tu sitio, te digo qué tiene y cuánto cuesta arreglarlo. Sin compromiso.",
-    "cta": "Quiero mi auditoría gratis"
-  },
-  "services": {
-    "title": "Servicios",
-    "intro": "Tres formas de resolver problemas reales. Sin paquetes, sin humo.",
-    "items": [
-      {
-        "name": "Auditoría técnica + Corrección",
-        "short": "Reviso tu sitio, encuentro qué lo hace lento o inseguro, y lo corrijo.",
-        "description": "Ideal si tu sitio funciona pero sentís que algo no anda bien: carga lento, tiene errores, se cayó, no pasa las pruebas de velocidad. Hago un diagnóstico completo y aplico las correcciones necesarias. Te entrego un reporte de lo que hice y por qué.",
-        "includes": ["Revisión de velocidad (Core Web Vitals)", "Detección de errores y conflictos", "Corrección de lo encontrado", "Reporte final con lo hecho y recomendaciones"],
-        "price": "Desde $8,500 MXN",
-        "for": "Negocios con sitio WordPress o similar que necesitan un ajuste técnico sin rediseño completo."
-      },
-      {
-        "name": "Migración desde WordPress",
-        "short": "Tu sitio actual está muy pesado o es difícil de mantener. Lo paso a una tecnología más ligera y rápida.",
-        "description": "Si tu WordPress tiene demasiados plugins, temas inflados o fue hackeado, migrarlo a una tecnología moderna (Astro, HTML estático o un stack ligero) puede reducir costos de hosting, mejorar velocidad y eliminar la mayoría de vulnerabilidades. Analizo tu sitio, propongo la mejor opción y ejecuto la migración.",
-        "includes": ["Análisis del sitio actual", "Propuesta de tecnología de destino", "Migración completa de contenido y diseño", "Pruebas de velocidad antes/después", "Entrega con documentación"],
-        "price": "Desde $18,000 MXN",
-        "for": "Negocios con WordPress inflado, lento o vulnerable que quieren algo más rápido y fácil de mantener."
-      },
-      {
-        "name": "Sitio web desde cero",
-        "short": "No tenés sitio o el actual ya no sirve. Lo construyo desde la estrategia hasta la publicación.",
-        "description": "Diseño y desarrollo completo de sitios corporativos, landing pages o sitios de servicios. Incluye estructura de contenido, diseño visual, desarrollo y publicación. Trabajo con Astro, HTML/CSS moderno y herramientas que garantizan velocidad y bajo mantenimiento.",
-        "includes": ["Definición de objetivos y estructura", "Diseño visual (Figma)", "Desarrollo (Astro, HTML/CSS)", "Optimización de velocidad y SEO básico", "Publicación y entrega"],
-        "price": "Desde $22,000 MXN",
-        "for": "Negocios, profesionales o startups que necesitan presencia web desde cero, sin depender de WordPress."
-      }
-    ],
-    "cta": "Solicitar auditoría gratuita"
-  },
-  "results": {
-    "title": "Resultados reales",
-    "intro": "Proyectos donde resolví problemas concretos, no donde hice cosas bonitas.",
-    "items": [
-      {
-        "client": "OK Hosting — Empresa de tecnología y hosting",
-        "problem": "Su sitio tenía 8 años sin una renovación real. Múltiples secciones agregadas sin criterio. Navegación confusa. Marca diluida. Competían contra Neubox y Xpress pero su sitio no lo reflejaba.",
-        "result": "Reestructuración completa del sitio, nueva identidad visual, mejora en arquitectura de información. El sitio pasó de ser un catálogo desordenado a una plataforma clara de servicios IT. La empresa amplió su portafolio a ciberseguridad e IA con una base visual sólida.",
-        "metrics": "Rediseño completo con mejora estimada de 40-60% en velocidad de navegación percibida. Reducción de tickets de soporte por confusión de usuarios."
-      },
-      {
-        "client": "Caintra Nuevo León — Asociación industrial",
-        "problem": "Necesitaban materiales de comunicación consistentes entre presentaciones, app móvil, manuales impresos y web. Cada área usaba formatos distintos. El equipo no tenía criterios visuales unificados.",
-        "result": "Sistema de diseño modular que funciona en presentaciones, app, manuales y web. Plantillas reutilizables que cualquier persona del equipo puede usar sin conocimientos de diseño.",
-        "metrics": "Reducción de tiempo de producción de materiales estimada en 50% gracias a las plantillas. Consistencia visual lograda en todos los canales."
-      },
-      {
-        "client": "1st Choice CE — Plataforma educativa en línea",
-        "problem": "Tenían cursos de calidad pero su presencia visual no comunicaba profesionalismo. Necesitaban transmitir credibilidad académica sin parecer rígidos. Los estudiantes abandonaban antes de inscribirse por desconfianza visual.",
-        "result": "Sistema de identidad completo con paleta de color que balancea autoridad y cercanía. Mejora en jerarquía de información de cursos. Presencia visual profesional que refleja la calidad del contenido.",
-        "metrics": "Mejora en percepción de marca. Sistema de color escalable a nuevos cursos y materiales. Reducción estimada de abandono en páginas de curso por claridad visual."
-      }
-    ]
-  },
-  "about": {
-    "title": "Quién soy",
-    "headline": "Diseñador que también programa. No al revés.",
-    "body1": "Me llamo César Fernando. Arranqué en diseño en 2007. Desde entonces trabajé con empresas, startups y equipos en México, Europa y Estados Unidos. Hice branding, diseño web, UX/UI y sistemas visuales.",
-    "body2": "En los últimos años empecé a estudiar software. No para cambiar de carrera. Para cerrar la brecha entre diseñar algo y asegurarme de que funcione bien, cargue rápido y sea fácil de mantener.",
-    "body3": "Hoy puedo auditar tu sitio, encontrar qué lo hace lento, corregirlo y si hace falta, reconstruirlo con tecnología más ligera. Todo con criterio visual y sin venderte humo.",
-    "body4": "No soy agencia. No soy ingeniero senior de NASA. Soy alguien que entiende cómo se ve y cómo funciona un sitio, y que te dice la verdad sobre lo que necesita tu proyecto.",
-    "tools": "Astro, HTML/CSS, React, Node.js, Python, Figma, Git. Uso IA como herramienta de aceleración, no como reemplazo de criterio."
-  },
-  "process": {
-    "title": "Cómo trabajo",
-    "intro": "Sin magia. Cuatro pasos.",
-    "stages": [
-      {
-        "step": "01",
-        "name": "Diagnóstico",
-        "desc": "Reviso tu sitio actual o tus necesidades. Detecto problemas de velocidad, seguridad, usabilidad o estructura. Te digo qué encuentra y qué se puede hacer.",
-        "client": "Vos me contás qué te preocupa de tu sitio. Yo reviso y te doy un diagnóstico claro."
-      },
-      {
-        "step": "02",
-        "name": "Propuesta",
-        "desc": "Te presento qué hay que hacer, cuánto cuesta y cuánto tiempo toma. Sin sorpresas. Sin letra chica.",
-        "client": "Revisás la propuesta, preguntás lo que necesites y decidís si avanzamos."
-      },
-      {
-        "step": "03",
-        "name": "Construcción",
-        "desc": "Diseño, desarrollo, migración o corrección según lo acordado. Te mantengo al tanto del avance. Hago pruebas antes de entregar.",
-        "client": "Ves el avance, probás, pedís ajustes si algo no te cierra."
-      },
-      {
-        "step": "04",
-        "name": "Entrega",
-        "desc": "Te entrego el sitio funcionando, con documentación clara. Te explico cómo mantenerlo o quedamos en darle seguimiento periódico.",
-        "client": "Recibís tu sitio listo, con instrucciones claras. Si necesitás ajustes posteriores, los vemos."
-      }
-    ]
-  },
-  "contact": {
-    "title": "¿Empezamos?",
-    "intro": "No necesitás un brief perfecto. Mandame un correo con lo que te preocupa de tu sitio y lo reviso. La primera auditoría de 15 minutos es gratis.",
-    "email": "hello@klav.design",
-    "emailLabel": "Escribime",
-    "behance": "Behance",
-    "behanceUrl": "https://www.behance.net/cesarfernando",
-    "linkedin": "LinkedIn",
-    "linkedinUrl": "https://www.linkedin.com/in/c%C3%A9sar-fernando-p%C3%A9rez-velasco-49b0492b/"
-  },
-  "projects": {
-    "weight": {
-      "okhosting": 90,
-      "firstchoice": 80,
-      "caintra": 70,
-      "mindsherpa": 60,
-      "titos": 50,
-      "airtm": 40,
-      "artearabia": 30,
-      "babilonia": 20,
-      "steps": 10
-    },
-    "okhosting": {
-      "title": "OK Hosting",
-      "tagline": "De proveedor de hosting a marca de tecnología",
-      "problem": "OK Hosting era percibido como un proveedor de hosting commodity. Necesitaba reposicionarse como empresa tecnológica ofreciendo hosting, software, gestión IT, ciberseguridad e IA — compitiendo contra Neubox y Xpress.",
-      "system": "Rebranding completo: nueva identidad de marca, diseño web, proceso UX/UI. Benchmark competitivo, personas de usuario (Rodrigo Sánchez — emprendedor tecnológico mexicano), arquitectura de información reestructurada para conversión.",
-      "result": "Una identidad memorable que posiciona OK Hosting como empresa tecnológica de espectro completo. El proyecto estableció una base clara para expansión futura de servicios.",
-      "context": "Tecnología / Hosting / Servicios IT — México",
-      "approach": "Benchmark competitivo, personas de usuario, arquitectura reorganizada, nueva identidad visual bold, sitio web orientado a servicios IT.",
-      "learnings": "Hacer rebranding de una empresa con historia requiere alinear stakeholders internos antes de tocar diseño."
-    },
-    "firstchoice": {
-      "title": "1st Choice CE",
-      "tagline": "Sistema de identidad para plataforma educativa",
-      "problem": "Plataforma educativa necesitaba credibilidad visual y diferenciación en un mercado saturado.",
-      "system": "Sistema de identidad completo, paleta de color profesional, jerarquía visual clara para contenidos de curso.",
-      "result": "Mejora en percepción de marca. Sistema escalable a nuevos cursos.",
-      "context": "Educación / Aprendizaje en línea — USA",
-      "approach": "Color system for clear information hierarchy in course materials.",
-      "learnings": "Las marcas educativas necesitan balancear seriedad académica con calidez."
-    },
-    "caintra": {
-      "title": "Caintra Nuevo León",
-      "tagline": "Sistema de diseño corporativo",
-      "problem": "Comunicación visual inconsistente entre formatos digitales e impresos. Cada área usaba formatos distintos.",
-      "system": "Sistema modular: slides, app, manuales, web con plantillas reutilizables.",
-      "result": "Reducción estimada del 50% en tiempo de producción de materiales. Consistencia visual en todos los canales.",
-      "context": "Institucional / Industrial / B2B — México",
-      "approach": "Sistema modular que personas sin formación en diseño pudieran usar.",
-      "learnings": "El diseño B2B requiere contención y sistemas claros para no-diseñadores."
-    },
-    "airtm": {
-      "title": "Air TM",
-      "tagline": "UX para plataforma financiera",
-      "problem": "Interfaz con inconsistencias visuales y navegación compleja para usuarios financieros.",
-      "system": "Propuesta UX con sistema de diseño unificado y patrones de accesibilidad.",
-      "result": "Base visual consistente y flujo de navegación más claro.",
-      "context": "Finanzas / LATAM",
-      "approach": "Research-based UX improvements.",
-      "learnings": "Interfaces financieras exigen claridad absoluta."
-    },
-    "mindsherpa": { "title": "MindSherpa", "tagline": "Sistema editorial", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" },
-    "titos": { "title": "Tito's Buckles", "tagline": "Marca artesanal", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" },
-    "steps": { "title": "Steps", "tagline": "Branding pedicure", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" },
-    "artearabia": { "title": "Arte Arabia", "tagline": "Plataforma cultural", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" },
-    "babilonia": { "title": "Babilonia", "tagline": "Venue cultural", "problem": "", "system": "", "result": "", "context": "", "approach": "", "learnings": "" }
-  }
+	"site": {
+		"name": "KLAV",
+		"tagline": "Sitios rápidos, seguros y fáciles de mantener"
+	},
+	"nav": {
+		"home": "Inicio",
+		"services": "Servicios",
+		"results": "Resultados",
+		"process": "Proceso",
+		"about": "Quién soy",
+		"contact": "Contacto"
+	},
+	"hero": {
+		"headline": "Tu sitio lento o caído te está costando clientes. Yo lo arreglo.",
+		"subtitle": "Auditoría gratuita de 15 minutos. Reviso tu sitio, te digo qué tiene y cuánto cuesta arreglarlo. Sin compromiso.",
+		"cta": "Quiero mi auditoría gratis"
+	},
+	"services": {
+		"title": "Servicios",
+		"intro": "Tres formas de resolver problemas reales. Sin paquetes, sin humo.",
+		"items": [
+			{
+				"name": "Auditoría técnica + Corrección",
+				"short": "Reviso tu sitio, encuentro qué lo hace lento o inseguro, y lo corrijo.",
+				"description": "Ideal si tu sitio funciona pero sentís que algo no anda bien: carga lento, tiene errores, se cayó, no pasa las pruebas de velocidad. Hago un diagnóstico completo y aplico las correcciones necesarias. Te entrego un reporte de lo que hice y por qué.",
+				"includes": [
+					"Revisión de velocidad (Core Web Vitals)",
+					"Detección de errores y conflictos",
+					"Corrección de lo encontrado",
+					"Reporte final con lo hecho y recomendaciones"
+				],
+				"price": "Desde $8,500 MXN",
+				"for": "Negocios con sitio WordPress o similar que necesitan un ajuste técnico sin rediseño completo."
+			},
+			{
+				"name": "Migración desde WordPress",
+				"short": "Tu sitio actual está muy pesado o es difícil de mantener. Lo paso a una tecnología más ligera y rápida.",
+				"description": "Si tu WordPress tiene demasiados plugins, temas inflados o fue hackeado, migrarlo a una tecnología moderna (Astro, HTML estático o un stack ligero) puede reducir costos de hosting, mejorar velocidad y eliminar la mayoría de vulnerabilidades. Analizo tu sitio, propongo la mejor opción y ejecuto la migración.",
+				"includes": [
+					"Análisis del sitio actual",
+					"Propuesta de tecnología de destino",
+					"Migración completa de contenido y diseño",
+					"Pruebas de velocidad antes/después",
+					"Entrega con documentación"
+				],
+				"price": "Desde $18,000 MXN",
+				"for": "Negocios con WordPress inflado, lento o vulnerable que quieren algo más rápido y fácil de mantener."
+			},
+			{
+				"name": "Sitio web desde cero",
+				"short": "No tenés sitio o el actual ya no sirve. Lo construyo desde la estrategia hasta la publicación.",
+				"description": "Diseño y desarrollo completo de sitios corporativos, landing pages o sitios de servicios. Incluye estructura de contenido, diseño visual, desarrollo y publicación. Trabajo con Astro, HTML/CSS moderno y herramientas que garantizan velocidad y bajo mantenimiento.",
+				"includes": [
+					"Definición de objetivos y estructura",
+					"Diseño visual (Figma)",
+					"Desarrollo (Astro, HTML/CSS)",
+					"Optimización de velocidad y SEO básico",
+					"Publicación y entrega"
+				],
+				"price": "Desde $22,000 MXN",
+				"for": "Negocios, profesionales o startups que necesitan presencia web desde cero, sin depender de WordPress."
+			}
+		],
+		"cta": "Solicitar auditoría gratuita"
+	},
+	"results": {
+		"title": "Resultados reales",
+		"intro": "Proyectos donde resolví problemas concretos, no donde hice cosas bonitas.",
+		"items": [
+			{
+				"client": "OK Hosting — Empresa de tecnología y hosting",
+				"problem": "Su sitio tenía 8 años sin una renovación real. Múltiples secciones agregadas sin criterio. Navegación confusa. Marca diluida. Competían contra Neubox y Xpress pero su sitio no lo reflejaba.",
+				"result": "Reestructuración completa del sitio, nueva identidad visual, mejora en arquitectura de información. El sitio pasó de ser un catálogo desordenado a una plataforma clara de servicios IT. La empresa amplió su portafolio a ciberseguridad e IA con una base visual sólida.",
+				"metrics": "Rediseño completo con mejora estimada de 40-60% en velocidad de navegación percibida. Reducción de tickets de soporte por confusión de usuarios."
+			},
+			{
+				"client": "Caintra Nuevo León — Asociación industrial",
+				"problem": "Necesitaban materiales de comunicación consistentes entre presentaciones, app móvil, manuales impresos y web. Cada área usaba formatos distintos. El equipo no tenía criterios visuales unificados.",
+				"result": "Sistema de diseño modular que funciona en presentaciones, app, manuales y web. Plantillas reutilizables que cualquier persona del equipo puede usar sin conocimientos de diseño.",
+				"metrics": "Reducción de tiempo de producción de materiales estimada en 50% gracias a las plantillas. Consistencia visual lograda en todos los canales."
+			},
+			{
+				"client": "1st Choice CE — Plataforma educativa en línea",
+				"problem": "Tenían cursos de calidad pero su presencia visual no comunicaba profesionalismo. Necesitaban transmitir credibilidad académica sin parecer rígidos. Los estudiantes abandonaban antes de inscribirse por desconfianza visual.",
+				"result": "Sistema de identidad completo con paleta de color que balancea autoridad y cercanía. Mejora en jerarquía de información de cursos. Presencia visual profesional que refleja la calidad del contenido.",
+				"metrics": "Mejora en percepción de marca. Sistema de color escalable a nuevos cursos y materiales. Reducción estimada de abandono en páginas de curso por claridad visual."
+			}
+		]
+	},
+	"about": {
+		"title": "Quién soy",
+		"headline": "Diseñador que también programa. No al revés.",
+		"body1": "Me llamo César Fernando. Arranqué en diseño en 2007. Desde entonces trabajé con empresas, startups y equipos en México, Europa y Estados Unidos. Hice branding, diseño web, UX/UI y sistemas visuales.",
+		"body2": "En los últimos años empecé a estudiar software. No para cambiar de carrera. Para cerrar la brecha entre diseñar algo y asegurarme de que funcione bien, cargue rápido y sea fácil de mantener.",
+		"body3": "Hoy puedo auditar tu sitio, encontrar qué lo hace lento, corregirlo y si hace falta, reconstruirlo con tecnología más ligera. Todo con criterio visual y sin venderte humo.",
+		"body4": "No soy agencia. No soy ingeniero senior de NASA. Soy alguien que entiende cómo se ve y cómo funciona un sitio, y que te dice la verdad sobre lo que necesita tu proyecto.",
+		"tools": "Astro, HTML/CSS, React, Node.js, Python, Figma, Git. Uso IA como herramienta de aceleración, no como reemplazo de criterio."
+	},
+	"process": {
+		"title": "Cómo trabajo",
+		"intro": "Sin magia. Cuatro pasos.",
+		"stages": [
+			{
+				"step": "01",
+				"name": "Diagnóstico",
+				"desc": "Reviso tu sitio actual o tus necesidades. Detecto problemas de velocidad, seguridad, usabilidad o estructura. Te digo qué encuentra y qué se puede hacer.",
+				"client": "Vos me contás qué te preocupa de tu sitio. Yo reviso y te doy un diagnóstico claro."
+			},
+			{
+				"step": "02",
+				"name": "Propuesta",
+				"desc": "Te presento qué hay que hacer, cuánto cuesta y cuánto tiempo toma. Sin sorpresas. Sin letra chica.",
+				"client": "Revisás la propuesta, preguntás lo que necesites y decidís si avanzamos."
+			},
+			{
+				"step": "03",
+				"name": "Construcción",
+				"desc": "Diseño, desarrollo, migración o corrección según lo acordado. Te mantengo al tanto del avance. Hago pruebas antes de entregar.",
+				"client": "Ves el avance, probás, pedís ajustes si algo no te cierra."
+			},
+			{
+				"step": "04",
+				"name": "Entrega",
+				"desc": "Te entrego el sitio funcionando, con documentación clara. Te explico cómo mantenerlo o quedamos en darle seguimiento periódico.",
+				"client": "Recibís tu sitio listo, con instrucciones claras. Si necesitás ajustes posteriores, los vemos."
+			}
+		]
+	},
+	"contact": {
+		"title": "¿Empezamos?",
+		"intro": "No necesitás un brief perfecto. Mandame un correo con lo que te preocupa de tu sitio y lo reviso. La primera auditoría de 15 minutos es gratis.",
+		"email": "cefev.diseno@gmail.com",
+		"emailLabel": "Escribime",
+		"behance": "Behance",
+		"behanceUrl": "https://www.behance.net/cesarfernando",
+		"linkedin": "LinkedIn",
+		"linkedinUrl": "https://www.linkedin.com/in/c%C3%A9sar-fernando-p%C3%A9rez-velasco-49b0492b/"
+	},
+	"projects": {
+		"weight": {
+			"okhosting": 90,
+			"firstchoice": 80,
+			"caintra": 70,
+			"mindsherpa": 60,
+			"titos": 50,
+			"airtm": 40,
+			"artearabia": 30,
+			"babilonia": 20,
+			"steps": 10
+		},
+		"okhosting": {
+			"title": "OK Hosting",
+			"tagline": "De proveedor de hosting a marca de tecnología",
+			"problem": "OK Hosting era percibido como un proveedor de hosting commodity. Necesitaba reposicionarse como empresa tecnológica ofreciendo hosting, software, gestión IT, ciberseguridad e IA — compitiendo contra Neubox y Xpress.",
+			"system": "Rebranding completo: nueva identidad de marca, diseño web, proceso UX/UI. Benchmark competitivo, personas de usuario (Rodrigo Sánchez — emprendedor tecnológico mexicano), arquitectura de información reestructurada para conversión.",
+			"result": "Una identidad memorable que posiciona OK Hosting como empresa tecnológica de espectro completo. El proyecto estableció una base clara para expansión futura de servicios.",
+			"context": "Tecnología / Hosting / Servicios IT — México",
+			"approach": "Benchmark competitivo, personas de usuario, arquitectura reorganizada, nueva identidad visual bold, sitio web orientado a servicios IT.",
+			"learnings": "Hacer rebranding de una empresa con historia requiere alinear stakeholders internos antes de tocar diseño."
+		},
+		"firstchoice": {
+			"title": "1st Choice CE",
+			"tagline": "Sistema de identidad para plataforma educativa",
+			"problem": "Plataforma educativa necesitaba credibilidad visual y diferenciación en un mercado saturado.",
+			"system": "Sistema de identidad completo, paleta de color profesional, jerarquía visual clara para contenidos de curso.",
+			"result": "Mejora en percepción de marca. Sistema escalable a nuevos cursos.",
+			"context": "Educación / Aprendizaje en línea — USA",
+			"approach": "Color system for clear information hierarchy in course materials.",
+			"learnings": "Las marcas educativas necesitan balancear seriedad académica con calidez."
+		},
+		"caintra": {
+			"title": "Caintra Nuevo León",
+			"tagline": "Sistema de diseño corporativo",
+			"problem": "Comunicación visual inconsistente entre formatos digitales e impresos. Cada área usaba formatos distintos.",
+			"system": "Sistema modular: slides, app, manuales, web con plantillas reutilizables.",
+			"result": "Reducción estimada del 50% en tiempo de producción de materiales. Consistencia visual en todos los canales.",
+			"context": "Institucional / Industrial / B2B — México",
+			"approach": "Sistema modular que personas sin formación en diseño pudieran usar.",
+			"learnings": "El diseño B2B requiere contención y sistemas claros para no-diseñadores."
+		},
+		"airtm": {
+			"title": "Air TM",
+			"tagline": "UX para plataforma financiera",
+			"problem": "Interfaz con inconsistencias visuales y navegación compleja para usuarios financieros.",
+			"system": "Propuesta UX con sistema de diseño unificado y patrones de accesibilidad.",
+			"result": "Base visual consistente y flujo de navegación más claro.",
+			"context": "Finanzas / LATAM",
+			"approach": "Research-based UX improvements.",
+			"learnings": "Interfaces financieras exigen claridad absoluta."
+		},
+		"mindsherpa": {
+			"title": "MindSherpa",
+			"tagline": "Sistema editorial",
+			"problem": "",
+			"system": "",
+			"result": "",
+			"context": "",
+			"approach": "",
+			"learnings": ""
+		},
+		"titos": {
+			"title": "Tito's Buckles",
+			"tagline": "Marca artesanal",
+			"problem": "",
+			"system": "",
+			"result": "",
+			"context": "",
+			"approach": "",
+			"learnings": ""
+		},
+		"steps": {
+			"title": "Steps",
+			"tagline": "Branding pedicure",
+			"problem": "",
+			"system": "",
+			"result": "",
+			"context": "",
+			"approach": "",
+			"learnings": ""
+		},
+		"artearabia": {
+			"title": "Arte Arabia",
+			"tagline": "Plataforma cultural",
+			"problem": "",
+			"system": "",
+			"result": "",
+			"context": "",
+			"approach": "",
+			"learnings": ""
+		},
+		"babilonia": {
+			"title": "Babilonia",
+			"tagline": "Venue cultural",
+			"problem": "",
+			"system": "",
+			"result": "",
+			"context": "",
+			"approach": "",
+			"learnings": ""
+		}
+	}
 }

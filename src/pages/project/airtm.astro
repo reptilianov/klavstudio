@@ -6,11 +6,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 	locale="en"
 	title="AirTM">
 	<section class="project-hero">
-		<div
-			class="hero-bg"
-			style="background:linear-gradient(135deg,#0d1b2a 0%,#1b263b 50%,#415a77 100%)">
-		</div>
-		<div class="hero-overlay"></div>
+		<video autoplay loop muted playsinline class="hero-bg" style="object-fit:cover">
+			<source src="/projects/airtm/AIRtM1.mp4" type="video/mp4"/>
+		</video>
+		<div class="hero-overlay" style="backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)"></div>
 		<div class="container">
 			<div class="hero-content">
 				<a

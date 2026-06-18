@@ -5,27 +5,44 @@ import { getTranslations } from '../../i18n';
 const t = getTranslations('es');
 ---
 
-<BaseLayout locale="es" title="Contacto">
-  <section class="page-hero">
-    <div class="container">
-      <h1>{t.contact.title}</h1>
-      <p class="page-intro">{t.contact.intro}</p>
-    </div>
-  </section>
+<BaseLayout
+	locale="es"
+	title="Contacto">
+	<section class="page-hero">
+		<div class="container">
+			<h1>{t.contact.title}</h1>
+			<p class="page-intro">{t.contact.intro}</p>
+		</div>
+	</section>
 
-  <section class="contact-direct">
-    <div class="container" style="text-align:center;padding:var(--space-xl) 0;">
-      <a href="mailto:hello@klav.design" class="btn btn-large" style="font-size:1.2rem;padding:1.2rem 3rem;">{t.contact.emailLabel}</a>
-      <div class="contact-links" style="margin-top:var(--space-lg);">
-        <a href={t.contact.behanceUrl} class="contact-link" target="_blank">
-          <span class="contact-label">{t.contact.behance}</span>
-          <span class="contact-value">behance.net/cesarfernando</span>
-        </a>
-        <a href={t.contact.linkedinUrl} class="contact-link" target="_blank">
-          <span class="contact-label">{t.contact.linkedin}</span>
-          <span class="contact-value">linkedin.com/in/cesarfernando</span>
-        </a>
-      </div>
-    </div>
-  </section>
+	<section class="contact-direct">
+		<div
+			class="container"
+			style="text-align:center;padding:var(--space-xl) 0;">
+			<a
+				href="mailto:cefev.diseno@gmail.com"
+				class="btn btn-large"
+				style="font-size:1.2rem;padding:1.2rem 3rem;"
+				>{t.contact.emailLabel}</a
+			>
+			<div
+				class="contact-links"
+				style="margin-top:var(--space-lg);">
+				<a
+					href={t.contact.behanceUrl}
+					class="contact-link"
+					target="_blank">
+					<span class="contact-label">{t.contact.behance}</span>
+					<span class="contact-value">behance.net/cesarfernando</span>
+				</a>
+				<a
+					href={t.contact.linkedinUrl}
+					class="contact-link"
+					target="_blank">
+					<span class="contact-label">{t.contact.linkedin}</span>
+					<span class="contact-value">linkedin.com/in/cesarfernando</span>
+				</a>
+			</div>
+		</div>
+	</section>
 </BaseLayout>
