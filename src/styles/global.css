@@ -1171,6 +1171,36 @@ p {
 	font-size: 0.875rem;
 	font-family: monospace;
 }
+.project-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: var(--space-md);
+}
+.tag {
+	display: inline-block;
+	background: var(--color-surface, #f0f1f2);
+	color: var(--color-text, #333);
+	padding: 0.3rem 0.75rem;
+	font-size: 0.8rem;
+	font-weight: 500;
+	border-radius: 4px;
+}
+.project-list {
+	margin: var(--space-md) 0;
+	padding-left: 1.25rem;
+}
+.project-list li {
+	margin-bottom: 0.5rem;
+	line-height: 1.6;
+}
+.project-process {
+	margin-top: var(--space-md);
+	padding: var(--space-sm) var(--space-md);
+	background: var(--color-surface, #f0f1f2);
+	border-radius: 8px;
+	font-size: 0.9rem;
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
