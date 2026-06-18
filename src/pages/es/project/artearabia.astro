@@ -56,6 +56,18 @@ const posts = Array.from({ length: 27 }, (_, i) => i + 1);
 				><span class="tag">PHP</span><span class="tag">UI/UX</span
 				><span class="tag">Social Media</span><span class="tag">Video</span>
 			</div>
+
+			<span class="section-label-text mb-4 mt-5">Posts para redes sociales</span>
+			<div class="project-grid-3">
+				{posts.filter(n => n !== 16).map(n => (
+					<img
+						src={`/projects/artearabia/${n}.jpg`}
+						alt={`Post ${n}`}
+						class="img-fluid"
+						style="width:100%;border-radius:8px"
+					/>
+				))}
+			</div>
 		</div>
 	</section>
 
@@ -111,17 +123,6 @@ const posts = Array.from({ length: 27 }, (_, i) => i + 1);
 				</video>
 			</div>
 
-			<span class="section-label-text mb-4 mt-5">Posts para redes sociales</span>
-			<div class="project-grid-3" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">
-				{posts.filter(n => n !== 16).map(n => (
-					<img
-						src={`/projects/artearabia/${n}.jpg`}
-						alt={`Post ${n}`}
-						class="img-fluid"
-						style="width:100%;border-radius:8px"
-					/>
-				))}
-			</div>
 		</div>
 	</section>
 
