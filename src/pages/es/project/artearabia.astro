@@ -7,11 +7,10 @@ const posts = Array.from({ length: 27 }, (_, i) => i + 1);
 	locale="es"
 	title="Arte Arabia">
 	<section class="project-hero">
-		<div
-			class="hero-bg"
-			style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)">
-		</div>
-		<div class="hero-overlay"></div>
+		<video autoplay loop muted playsinline class="hero-bg" style="object-fit:cover">
+			<source src="/projects/artearabia/perfumesArabes.mp4" type="video/mp4"/>
+		</video>
+		<div class="hero-overlay" style="backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)"></div>
 		<div class="container">
 			<div class="hero-content">
 				<a
@@ -74,7 +73,7 @@ const posts = Array.from({ length: 27 }, (_, i) => i + 1);
 	<section class="project-section-alt" style="position:relative;overflow:hidden">
 		<video autoplay loop muted playsinline
 			style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0">
-			<source src="/projects/artearabia/perfumesArabes.mp4" type="video/mp4"/>
+			<source src="/projects/artearabia/inciensos.mp4" type="video/mp4"/>
 		</video>
 		<div style="position:absolute;top:0;left:0;width:100%;height:100%;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);z-index:1"></div>
 		<div class="container" style="position:relative;z-index:2">
