@@ -1,29 +1,160 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+const posts = Array.from({ length: 27 }, (_, i) => i + 1);
 ---
 
-<BaseLayout locale="es" title="Arte Arabia">
-  <section class="project-hero">
-    <div class="hero-bg" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)"></div>
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <a href="/es/#results" class="back-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Volver</a>
-        <h1 class="project-title">Arte Arabia</h1>
-        <p class="project-tagline">Puente cultural a través del diseño</p>
-        <p class="project-context">Arte / Plataforma cultural</p>
-      </div>
-    </div>
-  </section>
+<BaseLayout
+	locale="es"
+	title="Arte Arabia">
+	<section class="project-hero">
+		<div
+			class="hero-bg"
+			style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)">
+		</div>
+		<div class="hero-overlay"></div>
+		<div class="container">
+			<div class="hero-content">
+				<a
+					href="/es/#results"
+					class="back-link"
+					><svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						><path
+							d="M15 5L5 10L15 15"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path></svg
+					>Volver</a
+				>
+				<h1 class="project-title">Arte Arabia</h1>
+				<p class="project-tagline">Tienda en línea WooCommerce con código 100% personalizado</p>
+				<p class="project-context">E-commerce / Retail — México</p>
+			</div>
+		</div>
+	</section>
 
-  <section class="project-section">
-    <div class="container"><span class="section-label-text"><i>01</i> Problema</span><p class="project-body">Plataforma de arte que necesitaba tender puentes culturales a través de su identidad visual. El desafío era crear un sistema que honrara la herencia artística árabe sin caer en estereotipos visuales.</p></div>
-  </section>
+	<section class="project-section">
+		<div class="container">
+			<span class="section-label-text"><i>01</i> Problema</span>
+			<p class="project-body">
+				Arte Arabia es una tienda que vende artículos de Arabia, Marruecos,
+				Turquía, Persia, Palestina, Emiratos y otros rincones de Oriente Medio:
+				decoración, inciensos, perfumes, joyería, moda y regalos. Necesitaban
+				un sitio web transaccional que reflejara la riqueza visual de sus
+				productos, funcionara como catálogo y tienda en línea, y representara
+				la identidad de sus tiendas físicas en Querétaro y Guadalajara. La
+				mayoría de los temas comerciales disponibles no lograban capturar la
+				estética oriental que la marca requería.
+			</p>
+			<div class="project-tags">
+				<span class="tag">WordPress</span><span class="tag">WooCommerce</span
+				><span class="tag">PHP</span><span class="tag">UI/UX</span
+				><span class="tag">Social Media</span><span class="tag">Video</span>
+			</div>
+		</div>
+	</section>
 
-  <section class="project-section-alt">
-    <div class="container"><span class="section-label-text"><i>02</i> Sistema y Enfoque</span><p class="project-body">Sistema elegante que honra la herencia cultural mientras abraza lo contemporáneo. Fusión de elementos artísticos tradicionales con presentación digital moderna, creando un puente visual entre dos mundos.</p><div class="project-approach"><h4>Enfoque</h4><p>Comprensión profunda de códigos visuales de ambas tradiciones culturales. El diseño intercultural requiere más investigación que intuición.</p></div></div>
-  </section>
+	<section class="project-section-alt">
+		<div class="container">
+			<span class="section-label-text"><i>02</i> Sistema y Enfoque</span>
+			<p class="project-body">
+				Se construyó un sitio WordPress + WooCommerce con tema 100%
+				personalizado — sin comprar un theme de Envato ni usar plantillas
+				prefabricadas. Cada línea de código fue escrita a la medida para
+				reflejar la identidad visual de la marca.
+			</p>
+			<p class="project-body">
+				El sitio maneja catálogo completo con categorías como Moda, Inciensos
+				& Aromas, Anillos & Joyería, Perfumes árabes, Hogar y Regalos. Incluye
+				pagos seguros con Stripe (Visa, Mastercard), atención personalizada por
+				WhatsApp y Facebook, y sincronización con dos tiendas físicas.
+			</p>
+			<p class="project-body">
+				Además del sitio web, se diseñaron publicaciones para redes sociales
+				que mantienen la identidad visual en Instagram y Facebook,
+				promocionando productos y colecciones.
+			</p>
+			<div class="project-process">
+				<strong>Entregables:</strong> sitio web transaccional + contenido para redes sociales
+			</div>
+		</div>
+	</section>
 
-  <section class="project-result"><div class="container"><div class="result-box"><h2>Resultado</h2><p>Identidad cultural que celebra tradiciones artísticas sin sentirse antigua ni estereotipada. Una plataforma que comunica profundidad y respeto por su herencia.</p></div></div></section>
-  <section class="project-section"><div class="container"><span class="section-label-text"><i>03</i> Aprendizajes</span><p class="project-body">El diseño intercultural requiere más investigación que intuición. No se puede diseñar para una cultura que no se entiende. Las referencias deben ser auténticas, no decorativas.</p></div></section>
+	<section class="project-gallery">
+		<div class="container">
+			<span class="section-label-text mb-4">Sitio web — Capturas de pantalla</span>
+			<img
+				src="/projects/artearabia/FireShot Capture 373 - Homepage - Arte Arabia Tienda - [artearabia.com].png"
+				alt="Arte Arabia homepage"
+				class="img-fluid"
+				style="width:100%;border-radius:12px;margin-bottom:2rem"
+			/>
+			<img
+				src="/projects/artearabia/FireShot Capture 374 - Anillos, Pulseras y bisurería archivos - Arte Arabia Tienda_ - [artearabia.com].png"
+				alt="Arte Arabia category page"
+				class="img-fluid"
+				style="width:100%;border-radius:12px;margin-bottom:2rem"
+			/>
+
+			<span class="section-label-text mb-4 mt-5">Videos promocionales</span>
+			<div class="project-grid-2">
+				<video controls class="img-fluid" style="width:100%;border-radius:12px">
+					<source src="/projects/artearabia/inciensos.mp4" type="video/mp4"/>
+				</video>
+				<video controls class="img-fluid" style="width:100%;border-radius:12px">
+					<source src="/projects/artearabia/perfumesArabes.mp4" type="video/mp4"/>
+				</video>
+			</div>
+
+			<span class="section-label-text mb-4 mt-5">Posts para redes sociales</span>
+			<div class="project-grid-3" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">
+				{posts.filter(n => n !== 16).map(n => (
+					<img
+						src={`/projects/artearabia/${n}.jpg`}
+						alt={`Post ${n}`}
+						class="img-fluid"
+						style="width:100%;border-radius:8px"
+					/>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="project-result">
+		<div class="container">
+			<div class="result-box">
+				<h2>Resultado</h2><p>
+					Tienda en línea completamente funcional con código 100% personalizado
+					que refleja fielmente la identidad de la marca. Integración de pagos
+					Stripe, atención multicanal (WhatsApp, Facebook), y presencia
+					coordinada entre tiendas físicas y sitio web. Catálogo digital de
+					cientos de productos con navegación intuitiva y estética oriental
+					auténtica.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="project-section">
+		<div class="container">
+			<span class="section-label-text"><i>03</i> Aprendizajes</span><p
+				class="project-body">
+				El comercio electrónico con WooCommerce permite total libertad creativa
+				cuando se escribe código personalizado. Los temas prefabricados limitan
+				la identidad de marca. Construir desde cero requiere más trabajo pero
+				el resultado es un sitio que realmente representa al negocio. Además,
+				el contenido para redes sociales extendió la identidad visual más allá
+				del sitio web, creando una experiencia de marca consistente en todos
+				los canales.
+			</p>
+		</div>
+	</section>
+
+	<style>
+		.tag { color: black; }
+	</style>
 </BaseLayout>

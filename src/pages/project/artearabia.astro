@@ -1,12 +1,159 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const posts = Array.from({ length: 27 }, (_, i) => i + 1);
 ---
 
-<BaseLayout locale="en" title="Arte Arabia">
-  <section class="project-hero"><div class="hero-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)"></div><div class="hero-overlay"></div>
-    <div class="container"><div class="hero-content"><a href="/#results" class="back-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</a><h1 class="project-title">Arte Arabia</h1><p class="project-tagline">Cultural bridge through design</p><p class="project-context">Art / Cultural Platform</p></div></div>
-  </section>
-  <section class="project-section"><div class="container"><span class="section-label-text"><i>01</i> Problem</span><p class="project-body">Art platform needing to build cultural bridges through its visual identity. The challenge was creating a system honoring Arab artistic heritage without falling into visual stereotypes.</p></div></section>
-  <section class="project-section-alt"><div class="container"><span class="section-label-text"><i>02</i> System</span><p class="project-body">Elegant system honoring heritage while embracing contemporary. Fusion of traditional artistic elements with modern digital presentation.</p></div></section>
-  <section class="project-result"><div class="container"><div class="result-box"><h2>Result</h2><p>Cultural identity celebrating artistic traditions without feeling dated or stereotyped. A platform communicating depth and respect for its heritage.</p></div></div></section>
+<BaseLayout
+	locale="en"
+	title="Arte Arabia">
+	<section class="project-hero">
+		<div
+			class="hero-bg"
+			style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)">
+		</div>
+		<div class="hero-overlay"></div>
+		<div class="container">
+			<div class="hero-content">
+				<a
+					href="/#results"
+					class="back-link"
+					><svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						><path
+							d="M15 5L5 10L15 15"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path></svg
+					>Back</a
+				>
+				<h1 class="project-title">Arte Arabia</h1>
+				<p class="project-tagline">WooCommerce store with 100% custom code</p>
+				<p class="project-context">E-commerce / Retail — Mexico</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="project-section">
+		<div class="container">
+			<span class="section-label-text"><i>01</i> Problem</span>
+			<p class="project-body">
+				Arte Arabia is a store selling items from Arabia, Morocco, Turkey,
+				Persia, Palestine, the Emirates and other corners of the Middle East:
+				decor, incense, perfumes, jewelry, fashion and gifts. They needed a
+				transactional website that reflected the visual richness of their
+				products, functioned as both catalog and online store, and represented
+				the identity of their physical locations in Querétaro and Guadalajara.
+				Most off-the-shelf themes failed to capture the Middle Eastern aesthetic
+				the brand required.
+			</p>
+			<div class="project-tags">
+				<span class="tag">WordPress</span><span class="tag">WooCommerce</span
+				><span class="tag">PHP</span><span class="tag">UI/UX</span
+				><span class="tag">Social Media</span><span class="tag">Video</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="project-section-alt">
+		<div class="container">
+			<span class="section-label-text"><i>02</i> System & Approach</span>
+			<p class="project-body">
+				A WordPress + WooCommerce site was built with a 100% custom theme —
+				no theme purchased from Envato and no prefabricated templates. Every
+				line of code was written to order to reflect the brand's visual
+				identity.
+			</p>
+			<p class="project-body">
+				The site handles a full catalog with categories including Fashion,
+				Incense & Aromas, Rings & Jewelry, Arabic Perfumes, Home and Gifts. It
+				includes secure payments via Stripe (Visa, Mastercard), personalized
+				attention through WhatsApp and Facebook, and synchronization with two
+				physical stores.
+			</p>
+			<p class="project-body">
+				In addition to the website, social media posts were designed to
+				maintain visual identity on Instagram and Facebook, promoting products
+				and collections.
+			</p>
+			<div class="project-process">
+				<strong>Deliverables:</strong> transactional website + social media content
+			</div>
+		</div>
+	</section>
+
+	<section class="project-gallery">
+		<div class="container">
+			<span class="section-label-text mb-4">Website — Screenshots</span>
+			<img
+				src="/projects/artearabia/FireShot Capture 373 - Homepage - Arte Arabia Tienda - [artearabia.com].png"
+				alt="Arte Arabia homepage"
+				class="img-fluid"
+				style="width:100%;border-radius:12px;margin-bottom:2rem"
+			/>
+			<img
+				src="/projects/artearabia/FireShot Capture 374 - Anillos, Pulseras y bisurería archivos - Arte Arabia Tienda_ - [artearabia.com].png"
+				alt="Arte Arabia category page"
+				class="img-fluid"
+				style="width:100%;border-radius:12px;margin-bottom:2rem"
+			/>
+
+			<span class="section-label-text mb-4 mt-5">Promotional videos</span>
+			<div class="project-grid-2">
+				<video controls class="img-fluid" style="width:100%;border-radius:12px">
+					<source src="/projects/artearabia/inciensos.mp4" type="video/mp4"/>
+				</video>
+				<video controls class="img-fluid" style="width:100%;border-radius:12px">
+					<source src="/projects/artearabia/perfumesArabes.mp4" type="video/mp4"/>
+				</video>
+			</div>
+
+			<span class="section-label-text mb-4 mt-5">Social media posts</span>
+			<div class="project-grid-3" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">
+				{posts.filter(n => n !== 16).map(n => (
+					<img
+						src={`/projects/artearabia/${n}.jpg`}
+						alt={`Post ${n}`}
+						class="img-fluid"
+						style="width:100%;border-radius:8px"
+					/>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="project-result">
+		<div class="container">
+			<div class="result-box">
+				<h2>Result</h2><p>
+					Fully functional online store with 100% custom code that faithfully
+					reflects the brand identity. Stripe payment integration, multi-channel
+					attention (WhatsApp, Facebook), and coordinated presence between
+					physical stores and website. Digital catalog of hundreds of products
+					with intuitive navigation and authentic Middle Eastern aesthetic.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="project-section">
+		<div class="container">
+			<span class="section-label-text"><i>03</i> Learnings</span><p
+				class="project-body">
+				WooCommerce e-commerce allows total creative freedom when custom code
+				is written. Prefabricated themes limit brand identity. Building from
+				scratch requires more work but the result is a site that truly
+				represents the business. Social media content extended the visual
+				identity beyond the website, creating a consistent brand experience
+				across all channels.
+			</p>
+		</div>
+	</section>
+
+	<style>
+		.tag { color: black; }
+	</style>
 </BaseLayout>
