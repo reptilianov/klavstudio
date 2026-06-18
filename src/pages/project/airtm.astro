@@ -2,61 +2,195 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout locale="en" title="AirTM">
-  <section class="project-hero">
-    <div class="hero-bg" style="background:linear-gradient(135deg,#0d1b2a 0%,#1b263b 50%,#415a77 100%)"></div>
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <a href="/#results" class="back-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</a>
-        <h1 class="project-title">AirTM</h1>
-        <p class="project-tagline">Proposal within the recruitment process</p>
-        <p class="project-context">Finance — Global / LATAM</p>
-      </div>
-    </div>
-  </section>
+<BaseLayout
+	locale="en"
+	title="AirTM">
+	<section class="project-hero">
+		<div
+			class="hero-bg"
+			style="background:linear-gradient(135deg,#0d1b2a 0%,#1b263b 50%,#415a77 100%)">
+		</div>
+		<div class="hero-overlay"></div>
+		<div class="container">
+			<div class="hero-content">
+				<a
+					href="/#results"
+					class="back-link"
+					><svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						><path
+							d="M15 5L5 10L15 15"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path></svg
+					>Back</a
+				>
+				<h1 class="project-title">AirTM</h1>
+				<p class="project-tagline">Proposal within the recruitment process</p>
+				<p class="project-context">Finance — Global / LATAM</p>
+			</div>
+		</div>
+	</section>
 
-  <section class="project-section">
-    <div class="container">
-      <span class="section-label-text"><i>01</i> Problem</span>
-      <p class="project-body">This was a test proposal within the recruitment process to enter the AIRTM company. Airtm is the easiest way to move money abroad. It helps people send and receive money, no matter what type of currency they use. It's a dollar tool that helps you send and receive money and fight hyperinflation by exchanging your local currency for dollars. The interface had visual inconsistencies, complex navigation, and lacked hierarchy for key financial functions. We work with developing countries to help them get better financial services.</p>
-      <div class="project-tags"><span class="tag">UI/UX</span><span class="tag">Strategy</span><span class="tag">Branding & Identity</span><span class="tag">Web Design & Development</span><span class="tag">Illustration</span><span class="tag">Video Editing</span></div>
-    </div>
-  </section>
+	<section class="project-section">
+		<div class="container">
+			<span class="section-label-text"><i>01</i> Problem</span>
+			<p class="project-body">
+				This was a test proposal within the recruitment process to enter the
+				AIRTM company. Airtm is the easiest way to move money abroad. It helps
+				people send and receive money, no matter what type of currency they use.
+				It's a dollar tool that helps you send and receive money and fight
+				hyperinflation by exchanging your local currency for dollars. The
+				interface had visual inconsistencies, complex navigation, and lacked
+				hierarchy for key financial functions. We work with developing countries
+				to help them get better financial services.
+			</p>
+			<div class="project-tags">
+				<span class="">UI/UX</span><span class="tag">Strategy</span><span
+					class="tag">Branding & Identity</span
+				><span class="tag">Web Design & Development</span><span class="tag"
+					>Illustration</span
+				><span class="tag">Video Editing</span>
+			</div>
 
-  <section class="project-section-alt">
-    <div class="container">
-      <span class="section-label-text"><i>02</i> System & Approach</span>
-      <p class="project-body">Starting with research and user acceptance testing, we documented areas of opportunity divided into three clearly defined objectives:</p>
-      <ol class="project-list">
-        <li><strong>Consistent design system</strong> — implement a unified visual foundation.</li>
-        <li><strong>Side menu</strong> — include quick and accessible navigation.</li>
-        <li><strong>Accessibility features</strong> — incorporate features for all users.</li>
-      </ol>
-      <p class="project-body">After analyzing the user journey map, secondary actions were moved from the menu to dropdowns in the top bar. The new debit card feature was added and visual feedback of the user's current position was improved.</p>
-      <p class="project-body">A new layout was created to display the same amount of vital information while making room for additional essential features such as quick actions and search. The login and sign-in screens were redesigned completely to create a more welcoming and intuitive experience.</p>
-      <div class="project-process"><strong>Process:</strong> discover → hypothesize → prototype</div>
-    </div>
-  </section>
+			<img
+				src="/projects/airtm/1fdd1a113587893.602b559f49d24-1.gif"
+				alt="AirTM UI"
+				class="img-fluid"
+				style="width:100%;border-radius:12px;margin-bottom:2rem"
+			/>
+		</div>
+	</section>
 
-  <section class="project-gallery">
-    <div class="container">
-      <span class="section-label-text mb-4">Corporate color palette</span>
-      <div class="project-colors"><div class="row" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem">
-        {[
-          {bg:'#77CCFF',c:'black'},{bg:'#0088FF',c:'white'},{bg:'#002233',c:'white'},{bg:'#00BB55',c:'white'},{bg:'#FFCC00',c:'black'},{bg:'#F0F1F2',c:'black'}
-        ].map(c => <div class="ColorSample p-3" style={`background:${c.bg};min-width:120px;flex:1`}><p style={`color:${c.c};margin:0;font-family:monospace;font-size:0.8rem`}>{c.bg}</p></div>)}
-      </div></div>
-      <img src="/projects/airtm/1fdd1a113587893.602b559f49d24-1.gif" alt="AirTM UI" class="img-fluid" style="width:100%;border-radius:12px;margin-bottom:2rem"/>
-      <img src="/projects/airtm/ui.gif" alt="AirTM UI flows" class="img-fluid" style="width:100%;border-radius:12px;margin-bottom:2rem"/>
-      <img src="/projects/airtm/AirTm-UI-UX-Designer.jpg" alt="AirTM UX design" class="img-fluid" style="width:100%;border-radius:12px;margin-bottom:2rem"/>
-      <img src="/projects/airtm/cardDesign.jpg" alt="AirTM card design" class="img-fluid" style="width:100%;border-radius:12px;margin-bottom:2rem"/>
-      <video controls class="img-fluid" style="width:100%;border-radius:12px">
-        <source src="/projects/airtm/AIRtM1.mp4" type="video/mp4"/>
-      </video>
-    </div>
-  </section>
+	<section class="project-section-alt">
+		<div class="container">
+			<span class="section-label-text"><i>02</i> System & Approach</span>
+			<p class="project-body">
+				Starting with research and user acceptance testing, we documented areas
+				of opportunity divided into three clearly defined objectives:
+			</p>
+			<ol class="project-list">
+				<li>
+					<strong>Consistent design system</strong> — implement a unified visual foundation.
+				</li>
+				<li>
+					<strong>Side menu</strong> — include quick and accessible navigation.
+				</li>
+				<li>
+					<strong>Accessibility features</strong> — incorporate features for all users.
+				</li>
+			</ol>
+			<p class="project-body">
+				After analyzing the user journey map, secondary actions were moved from
+				the menu to dropdowns in the top bar. The new debit card feature was
+				added and visual feedback of the user's current position was improved.
+			</p>
+			<p class="project-body">
+				A new layout was created to display the same amount of vital information
+				while making room for additional essential features such as quick
+				actions and search. The login and sign-in screens were redesigned
+				completely to create a more welcoming and intuitive experience.
+			</p>
+			<div class="project-process">
+				<strong>Process:</strong> discover → hypothesize → prototype
+			</div>
+		</div>
+	</section>
 
-  <section class="project-result"><div class="container"><div class="result-box"><h2>Result</h2><p>The designs were not implemented, however several proposals were made to improve the usability of the platform. Clear foundations for design system, navigation, and accessibility were laid for future product iterations.</p></div></div></section>
-  <section class="project-section"><div class="container"><span class="section-label-text"><i>03</i> Learnings</span><p class="project-body">Financial interfaces demand absolute clarity. Every element must convey security and trust. The recruitment process as a test case demonstrated that even unimplemented proposals generate value when they document a structured approach to research and design.</p></div></section>
+	<section class="project-gallery">
+		<div class="container">
+			<span class="section-label-text mb-4">Corporate color palette</span>
+			<div class="project-colors">
+				<div
+					class="row"
+					style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem">
+					{
+						[
+							{ bg: '#77CCFF', c: 'black' },
+							{ bg: '#0088FF', c: 'white' },
+							{ bg: '#002233', c: 'white' },
+							{ bg: '#00BB55', c: 'white' },
+							{ bg: '#FFCC00', c: 'black' },
+							{ bg: '#F0F1F2', c: 'black' },
+						].map((c) => (
+							<div
+								class="ColorSample p-3"
+								style={`background:${c.bg};min-width:120px;flex:1`}>
+								<p
+									style={`color:${c.c};margin:0;font-family:monospace;font-size:0.8rem`}>
+									{c.bg}
+								</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+
+			<img
+				src="/projects/airtm/ui.gif"
+				alt="AirTM UI flows"
+				class="img-fluid"
+				style="width:100%;border-radius:12px;margin-bottom:2rem"
+			/>
+			<img
+				src="/projects/airtm/AirTm-UI-UX-Designer.jpg"
+				alt="AirTM UX design"
+				class="img-fluid"
+				style="width:100%;border-radius:12px;margin-bottom:2rem"
+			/>
+			<img
+				src="/projects/airtm/cardDesign.jpg"
+				alt="AirTM card design"
+				class="img-fluid"
+				style="width:100%;border-radius:12px;margin-bottom:2rem"
+			/>
+			<video
+				controls
+				class="img-fluid"
+				style="width:100%;border-radius:12px">
+				<source
+					src="/projects/airtm/AIRtM1.mp4"
+					type="video/mp4"
+				/>
+			</video>
+		</div>
+	</section>
+
+	<section class="project-result">
+		<div class="container">
+			<div class="result-box">
+				<h2>Result</h2><p>
+					The designs were not implemented, however several proposals were made
+					to improve the usability of the platform. Clear foundations for design
+					system, navigation, and accessibility were laid for future product
+					iterations.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="project-section">
+		<div class="container">
+			<span class="section-label-text"><i>03</i> Learnings</span><p
+				class="project-body">
+				Financial interfaces demand absolute clarity. Every element must convey
+				security and trust. The recruitment process as a test case demonstrated
+				that even unimplemented proposals generate value when they document a
+				structured approach to research and design.
+			</p>
+		</div>
+	</section>
+
+	<style>
+		.tag {
+			color: black;
+		}
+		.project-hero {
+			background-image: url();
+		}
+	</style>
 </BaseLayout>
