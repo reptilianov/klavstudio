@@ -25,6 +25,7 @@ const allKeys = [
 const projectKeys = allKeys.sort(
 	(a, b) => (t.projects.weight[b] || 0) - (t.projects.weight[a] || 0),
 );
+const navProjectKeys = projectKeys.filter((k) => k !== 'babilonia');
 
 const basePath = locale === 'en' ? '' : '/es';
 const servicesPath = locale === 'en' ? '/services' : '/es/servicios';
@@ -118,7 +119,7 @@ const fullTitle = title
 						</span>
 						<div class="nav-dropdown-menu">
 							{
-								projectKeys.map((key) => (
+								navProjectKeys.map((key) => (
 									<a
 										href={`/${locale === 'en' ? 'project' : 'es/project'}/${key}`}
 										class="dropdown-item">
