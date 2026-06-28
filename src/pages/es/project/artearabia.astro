@@ -69,12 +69,15 @@ const posts = Array.from({ length: 27 }, (_, i) => i + 1);
 			</div>
 
 			<span class="section-label-text mb-4 mt-5">Videos promocionales</span>
-			<div class="project-grid-2">
-				<video controls class="img-fluid" style="width:100%;border-radius:12px">
+			<div id="artearabia-videos" class="project-grid-3">
+				<video controls preload="none" data-play-order="1" class="img-fluid video-seq" style="width:100%;border-radius:12px">
+					<source src="/projects/artearabia/v3.mp4" type="video/mp4"/>
+				</video>
+				<video controls preload="none" data-play-order="2" class="img-fluid video-seq" style="width:100%;border-radius:12px">
 					<source src="/projects/artearabia/v2.mp4" type="video/mp4"/>
 				</video>
-				<video controls class="img-fluid" style="width:100%;border-radius:12px">
-					<source src="/projects/artearabia/v3.mp4" type="video/mp4"/>
+				<video controls preload="none" data-play-order="3" class="img-fluid video-seq" style="width:100%;border-radius:12px">
+					<source src="/projects/artearabia/v4.mp4" type="video/mp4"/>
 				</video>
 			</div>
 		</div>
@@ -164,3 +167,27 @@ const posts = Array.from({ length: 27 }, (_, i) => i + 1);
 		.tag { color: black; }
 	</style>
 </BaseLayout>
+
+<script is:inline>
+	const container = document.getElementById('artearabia-videos');
+	if (container) {
+		const videos = [...container.querySelectorAll('.video-seq')].sort(
+			(a, b) => +a.dataset.playOrder - +b.dataset.playOrder
+		);
+		const obs = new IntersectionObserver(([entry]) => {
+			if (entry.isIntersecting) {
+				obs.disconnect();
+				let i = 0;
+				function playNext() {
+					if (i >= videos.length) return;
+					const v = videos[i++];
+					v.currentTime = 0;
+					v.play().catch(() => {});
+					v.onended = playNext;
+				}
+				playNext();
+			}
+		}, { threshold: 0.5 });
+		obs.observe(container);
+	}
+</script>
