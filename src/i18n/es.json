@@ -12,13 +12,13 @@
 		"contact": "Contacto"
 	},
 	"hero": {
-		"headline": "Tu sitio lento o caído te está costando clientes. Yo lo arreglo.",
+		"headline": "Tu sitio debería trabajar tan duro como tú. Hagamos que pase.",
 		"subtitle": "Auditoría gratuita de 15 minutos. Reviso tu sitio, te digo qué tiene y cuánto cuesta arreglarlo. Sin compromiso.",
 		"cta": "Quiero mi auditoría gratis"
 	},
 	"services": {
 		"title": "Servicios",
-		"intro": "Tres formas de resolver problemas reales. Sin paquetes, sin humo.",
+		"intro": "Tres formas de resolver problemas reales. Soluciones claras, sin misterio.",
 		"items": [
 			{
 				"name": "Auditoría técnica + Corrección",
@@ -90,11 +90,11 @@
 	},
 	"about": {
 		"title": "Quién soy",
-		"headline": "Diseñador que también programa. No al revés.",
+		"headline": "Diseñador que también programa.",
 		"body1": "Me llamo César Fernando. Arranqué en diseño en 2007. Desde entonces trabajé con empresas, startups y equipos en México, Europa y Estados Unidos. Hice branding, diseño web, UX/UI y sistemas visuales.",
 		"body2": "En los últimos años empecé a estudiar software. No para cambiar de carrera. Para cerrar la brecha entre diseñar algo y asegurarme de que funcione bien, cargue rápido y sea fácil de mantener.",
 		"body3": "Hoy puedo auditar tu sitio, encontrar qué lo hace lento, corregirlo y si hace falta, reconstruirlo con tecnología más ligera. Todo con criterio visual y sin venderte humo.",
-		"body4": "No soy agencia. No soy ingeniero senior de NASA. Soy alguien que entiende cómo se ve y cómo funciona un sitio, y que te dice la verdad sobre lo que necesita tu proyecto.",
+		"body4": "Trabajo uno a uno. Sin capas, sin intermediarios. Entiendo cómo se ve y cómo funciona un sitio, y te digo la verdad sobre lo que necesita tu proyecto.",
 		"tools": "Astro, HTML/CSS, React, Node.js, Python, Figma, Git. Uso IA como herramienta de aceleración, no como reemplazo de criterio."
 	},
 	"process": {
@@ -105,33 +105,33 @@
 				"step": "01",
 				"name": "Diagnóstico",
 				"desc": "Reviso tu sitio actual o tus necesidades. Detecto problemas de velocidad, seguridad, usabilidad o estructura. Te digo qué encuentra y qué se puede hacer.",
-				"client": "Vos me contás qué te preocupa de tu sitio. Yo reviso y te doy un diagnóstico claro."
+				"client": "Me cuentas qué te preocupa de tu sitio. Yo reviso y te doy un diagnóstico claro."
 			},
 			{
 				"step": "02",
 				"name": "Propuesta",
 				"desc": "Te presento qué hay que hacer, cuánto cuesta y cuánto tiempo toma. Sin sorpresas. Sin letra chica.",
-				"client": "Revisás la propuesta, preguntás lo que necesites y decidís si avanzamos."
+				"client": "Revisas la propuesta, preguntas lo que necesites y decides si avanzamos."
 			},
 			{
 				"step": "03",
 				"name": "Construcción",
 				"desc": "Diseño, desarrollo, migración o corrección según lo acordado. Te mantengo al tanto del avance. Hago pruebas antes de entregar.",
-				"client": "Ves el avance, probás, pedís ajustes si algo no te cierra."
+				"client": "Ves el avance, pruebas, pides ajustes si algo no te cierra."
 			},
 			{
 				"step": "04",
 				"name": "Entrega",
 				"desc": "Te entrego el sitio funcionando, con documentación clara. Te explico cómo mantenerlo o quedamos en darle seguimiento periódico.",
-				"client": "Recibís tu sitio listo, con instrucciones claras. Si necesitás ajustes posteriores, los vemos."
+				"client": "Recibes tu sitio listo, con instrucciones claras. Si necesitas ajustes posteriores, los vemos."
 			}
 		]
 	},
 	"contact": {
 		"title": "¿Empezamos?",
-		"intro": "No necesitás un brief perfecto. Mandame un correo con lo que te preocupa de tu sitio y lo reviso. La primera auditoría de 15 minutos es gratis.",
+		"intro": "No necesitas un brief perfecto. Mándame un correo con lo que te preocupa de tu sitio y lo reviso. La primera auditoría de 15 minutos es gratis.",
 		"email": "cefev.diseno@gmail.com",
-		"emailLabel": "Escribime",
+		"emailLabel": "Escríbeme",
 		"behance": "Behance",
 		"behanceUrl": "https://www.behance.net/cesarfernando",
 		"linkedin": "LinkedIn",

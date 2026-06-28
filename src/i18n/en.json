@@ -12,13 +12,13 @@
 		"contact": "Contact"
 	},
 	"hero": {
-		"headline": "Your slow or broken site is costing you clients. I fix it.",
+		"headline": "Your site should work as hard as you do. Let's make that happen.",
 		"subtitle": "Free 15-minute audit. I review your site, tell you what's wrong, and how much it costs to fix. No strings attached.",
 		"cta": "Get my free audit"
 	},
 	"services": {
 		"title": "Services",
-		"intro": "Three ways to solve real problems. No packages, no fluff.",
+		"intro": "Three ways to solve real problems. Clear solutions, no mystery.",
 		"items": [
 			{
 				"name": "Technical Audit + Fix",
@@ -90,11 +90,11 @@
 	},
 	"about": {
 		"title": "About",
-		"headline": "Designer who also codes. Not the other way around.",
+		"headline": "Designer who also codes.",
 		"body1": "I'm César Fernando. I started in design in 2007. Since then I've worked with companies, startups and teams in Mexico, Europe and the US. I've done branding, web design, UX/UI and visual systems.",
 		"body2": "In recent years I started studying software. Not to switch careers. To close the gap between designing something and making sure it works well, loads fast, and is easy to maintain.",
 		"body3": "Today I can audit your site, find what's making it slow, fix it, and if needed, rebuild it with lighter technology. All with visual judgment and without selling you hype.",
-		"body4": "I'm not an agency. I'm not a NASA senior engineer. I'm someone who understands how a site looks and how it works, and tells you the truth about what your project needs.",
+		"body4": "I work one-on-one. No layers, no overhead. I understand how a site looks and how it works, and I tell you the truth about what your project needs.",
 		"tools": "Astro, HTML/CSS, React, Node.js, Python, Figma, Git. I use AI as an acceleration tool, not as a replacement for judgment."
 	},
 	"process": {

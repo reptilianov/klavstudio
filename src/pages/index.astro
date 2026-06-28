@@ -3,6 +3,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getTranslations } from '../i18n';
 
 const t = getTranslations('en');
+
+const projectThumbs = {
+	okhosting: '/projects/okhosting/screens/OkHosting-Screen2.webp',
+	firstchoice: '/projects/firstchoice/1st-2.png',
+	caintra: '/projects/caintra/Slider-Designer-powerPoint-1.webp',
+	mindsherpa: '/projects/mindsherpa/Book-Cover-Design.jpg',
+	airtm: '/projects/airtm/cardDesign.jpg',
+	artearabia: '/projects/artearabia/2.jpg',
+	babilonia: '/projects/babilonia/ShowLogoCompleto.webp',
+	steps: '/projects/steps/download.webp',
+};
+
+const galleryKeys = ['okhosting', 'firstchoice', 'caintra', 'mindsherpa', 'airtm', 'artearabia', 'babilonia', 'steps'];
 ---
 
 <BaseLayout locale="en">
@@ -17,6 +30,32 @@ const t = getTranslations('en');
 					>{t.hero.cta}</a
 				>
 			</div>
+		</div>
+	</section>
+
+	<section class="project-masonry">
+		<div class="container">
+			<h2 class="section-title scroll-fade">Projects</h2>
+		</div>
+		<div class="masonry-grid">
+			{
+				galleryKeys.map((key, i) => (
+					<a
+						href={`/project/${key}`}
+						class="masonry-item scroll-fade"
+						style={`transition-delay: ${i * 0.05}s`}>
+						<img
+							src={projectThumbs[key]}
+							alt={t.projects[key]?.title || key}
+							loading="lazy"
+						/>
+						<div class="masonry-overlay">
+							<span class="masonry-title">{t.projects[key]?.title || key}</span>
+							<span class="masonry-tagline">{t.projects[key]?.tagline || ''}</span>
+						</div>
+					</a>
+				))
+			}
 		</div>
 	</section>
 
