@@ -342,6 +342,13 @@ p {
 .process-step h3 { font-size: 1rem; margin-bottom: var(--space-xs); color: var(--color-text); }
 .process-step p { font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.6; }
 
+/* MORE PROJECTS (footer of project pages) */
+.more-projects {
+	padding: var(--space-xl) 0;
+	background: var(--color-bg);
+	border-top: 1px solid var(--color-border);
+}
+
 /* HOME CTA */
 .home-cta { background: var(--color-bg); border-top: 1px solid var(--color-border); text-align: center; }
 .home-cta h2 { margin-bottom: var(--space-sm); }

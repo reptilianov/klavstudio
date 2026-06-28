@@ -1,21 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getTranslations } from '../i18n';
+import { thumbnails, visibleSlugs } from '../data/projects';
 
 const t = getTranslations('en');
-
-const projectThumbs = {
-	okhosting: '/siteimages/Okhosting.webp',
-	firstchoice: '/siteimages/firstchoice.webp',
-	caintra: '/siteimages/caintra.webp',
-	mindsherpa: '/siteimages/mindsherpa.webp',
-	airtm: '/siteimages/airtm.webp',
-	artearabia: '/siteimages/artearabia.webp',
-	babilonia: '/siteimages/babilonia.webp',
-	steps: '/siteimages/steps.webp',
-};
-
-const galleryKeys = ['okhosting', 'firstchoice', 'caintra', 'mindsherpa', 'airtm', 'artearabia', 'steps'];
 ---
 
 <BaseLayout locale="en">
@@ -39,21 +27,19 @@ const galleryKeys = ['okhosting', 'firstchoice', 'caintra', 'mindsherpa', 'airtm
 		</div>
 		<div class="masonry-grid">
 			{
-				galleryKeys.map((key, i) => (
+				visibleSlugs.map((key, i) => (
 					<a
 						href={`/project/${key}`}
 						class="masonry-item scroll-fade"
 						style={`transition-delay: ${i * 0.05}s`}>
 						<img
-							src={projectThumbs[key]}
+							src={thumbnails[key]}
 							alt={t.projects[key]?.title || key}
 							loading="lazy"
 						/>
 						<div class="masonry-overlay">
 							<span class="masonry-title">{t.projects[key]?.title || key}</span>
-							<span class="masonry-tagline">
-								{t.projects[key]?.tagline || ''}
-							</span>
+							<span class="masonry-tagline">{t.projects[key]?.tagline || ''}</span>
 						</div>
 					</a>
 				))

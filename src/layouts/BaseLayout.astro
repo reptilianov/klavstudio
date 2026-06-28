@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { getTranslations } from '../i18n';
+import { allSlugs, thumbnails, visibleSlugs } from '../data/projects';
 
 interface Props {
 	locale: 'en' | 'es';
@@ -11,21 +12,10 @@ interface Props {
 const { locale, title, description } = Astro.props;
 const t = getTranslations(locale);
 
-const allKeys = [
-	'okhosting',
-	'firstchoice',
-	'caintra',
-	'airtm',
-	'mindsherpa',
-	'titos',
-	'steps',
-	'artearabia',
-	'babilonia',
-];
-const projectKeys = allKeys.sort(
-	(a, b) => (t.projects.weight[b] || 0) - (t.projects.weight[a] || 0),
-);
-const navProjectKeys = projectKeys.filter((k) => k !== 'babilonia');
+const navSlugs = allSlugs.filter((k) => k !== 'babilonia');
+const currentSlug = Astro.url.pathname.match(/^\/(?:es\/)?project\/([^/]+)/)?.[1];
+const isProjectPage = !!currentSlug;
+const moreProjects = isProjectPage ? visibleSlugs.filter((s) => s !== currentSlug) : [];
 
 const basePath = locale === 'en' ? '' : '/es';
 const servicesPath = locale === 'en' ? '/services' : '/es/servicios';
@@ -119,7 +109,7 @@ const fullTitle = title
 						</span>
 						<div class="nav-dropdown-menu">
 							{
-								navProjectKeys.map((key) => (
+								navSlugs.map((key) => (
 									<a
 										href={`/${locale === 'en' ? 'project' : 'es/project'}/${key}`}
 										class="dropdown-item">
@@ -161,6 +151,41 @@ const fullTitle = title
 		<main>
 			<slot />
 		</main>
+
+		{
+			isProjectPage && moreProjects.length > 0 && (
+				<section class="more-projects">
+					<div class="container">
+						<h2 class="section-title scroll-fade">
+							{locale === 'en' ? 'More projects' : 'Más proyectos'}
+						</h2>
+					</div>
+					<div class="masonry-grid">
+						{
+							moreProjects.map((slug) => (
+								<a
+									href={`/${locale === 'en' ? 'project' : 'es/project'}/${slug}`}
+									class="masonry-item scroll-fade">
+									<img
+										src={thumbnails[slug]}
+										alt={t.projects[slug]?.title || slug}
+										loading="lazy"
+									/>
+									<div class="masonry-overlay">
+										<span class="masonry-title"
+											>{t.projects[slug]?.title || slug}</span
+										>
+										<span class="masonry-tagline"
+											>{t.projects[slug]?.tagline || ''}</span
+										>
+									</div>
+								</a>
+							))
+						}
+					</div>
+				</section>
+			)
+		}
 
 		<footer class="footer">
 			<div class="container">
