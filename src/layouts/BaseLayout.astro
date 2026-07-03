@@ -72,6 +72,10 @@ const fullTitle = title
 			hreflang="es"
 			href="https://klav.design/es/"
 		/>
+		<link
+			rel="canonical"
+			href={`https://klav.design${Astro.url.pathname.replace(/\/$/, '')}`}
+		/>
 		<title>{fullTitle}</title>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9SLJSQTWJT"></script>
 		<script>

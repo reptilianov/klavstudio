@@ -1,0 +1,32 @@
+---
+export function getStaticPaths() {
+	const redirects = {
+		'caintra-nuevo-leon': '/project/caintra/',
+		'1st-choice-ce': '/project/firstchoice/',
+		steps: '/project/steps/',
+		'work-2': '/',
+	};
+	return Object.entries(redirects).map(([slug, to]) => ({
+		params: { slug },
+		props: { to },
+	}));
+}
+
+const { to } = Astro.props;
+const currentUrl = Astro.url;
+const redirectUrl = `https://klav.design${to}`;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Redirecting...</title>
+		<link rel="canonical" href={redirectUrl} />
+		<meta http-equiv="refresh" content={`0; url=${redirectUrl}`} />
+	</head>
+	<body>
+		<script>location.href = '{redirectUrl}';</script>
+	</body>
+</html>
