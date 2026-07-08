@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout locale="es" title="Raíces Universales">
+  <section class="project-hero">
+    <div class="hero-bg" style="background:linear-gradient(135deg,#1a3a2a,#2d5a3f,#1a3a2a)"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <a href="/es/#results" class="back-link"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Volver</a>
+        <h1 class="project-title">Raíces Universales</h1>
+        <p class="project-tagline">Identidad corporativa y sitio web para plataforma de salud mental</p>
+        <p class="project-context">CLIENTE: Georgina Niño — SECTOR: Salud Mental / Bienestar / Educación — UBICACIÓN: México</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container"><span class="section-label-text"><i>01</i> El desafío de marca</span><p class="project-body">Raíces Universales es una plataforma de salud mental fundada por Georgina Niño, psicóloga transpersonal. La marca necesitaba comunicar seguridad, profundidad y credibilidad profesional mientras abarcaba múltiples líneas de servicio: psicoterapia, cursos en línea, diplomados, un programa de voluntariado, un retiro de montaña (Finca Raíces) y un programa comunitario llamado "Sanando en Comunidad".</p><p class="project-body">El desafío central fue crear una identidad visual unificada que pudiera sostener la tensión entre el profesionalismo clínico y la profundidad espiritual — sin caer en clichés de ninguno de los dos extremos. La identidad debía sentirse sólida, cálida y confiable, mientras evocaba crecimiento, conexión y transformación.</p></div>
+  </section>
+
+  <section class="project-section-alt">
+    <div class="container"><span class="section-label-text"><i>02</i> Sistema de identidad visual</span><p class="project-body">Se desarrolló un sistema de marca completo en torno al concepto de <strong>raíces</strong> como metáfora del anclaje psicológico y el crecimiento. El sistema incluye:</p><div class="project-list mt-4"><p><strong>Sistema de logo</strong> — Variantes primaria, secundaria e icono para uso digital e impreso. El imagotipo evoca un sistema de raíces, una huella digital y una red neuronal — tres capas de significado que mapean directamente los dominios de la marca: naturaleza, identidad y psicología.</p><p><strong>Paleta de color</strong> — Verdes tierra, neutros cálidos y cafés profundos como base, con un acento rosa suave para calidez y compasión. Los colores fueron seleccionados por su asociación psicológica con seguridad, crecimiento y contención.</p><p><strong>Tipografía</strong> — Una serifa cálida para títulos (transmite tradición y confianza) combinada con una sans-serif limpia para texto (moderna, accesible, claridad clínica).</p><p><strong>Lenguaje visual</strong> — Formas orgánicas, texturas naturales y espacios generosos para comunicar calma y amplitud. La dirección de fotografía favorece la luz natural cálida, la conexión humana y la inmersión en la naturaleza.</p></div></div>
+  </section>
+
+  <section class="project-section">
+    <div class="container"><span class="section-label-text"><i>03</i> Aplicaciones de marca</span><p class="project-body">La identidad se aplicó en todos los puntos de contacto de la marca:</p><div class="project-list mt-4"><p><strong>Plantillas para redes sociales</strong> — Presencia cohesiva en Instagram y Facebook con variaciones de plantillas para psicoeducación, promoción de programas, construcción comunitaria y contenido de naturaleza. A continuación, ejemplos del lote de contenido de enero 2022.</p></div></div>
+  </section>
+
+  <section class="project-gallery"><div class="container"><div class="project-grid-3">{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map(n => {const fn = n === 1 ? 'RedesSociales_Enero-2022.jpg' : `RedesSociales_Enero 2022-${String(n).padStart(2,'0')}.jpg`; return <img src={`/projects/raicesuniversales/${encodeURI(fn)}`} alt={`Post redes ${n}`} style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px"/>})}</div></div></section>
+
+  <section class="project-section-alt">
+    <div class="container"><span class="section-label-text"><i>04</i> Diseño y desarrollo del sitio web</span><p class="project-body">Se diseñó y desarrolló un sitio WordPress completo para fungir como el centro neurálgico de todas las actividades de Raíces Universales. La estructura del sitio se organizó en torno a los cuatro pilares principales de la marca: servicios de psicoterapia, programas educativos (diplomados, cursos), blog/recursos y Finca Raíces (el espacio de retiro).</p><p class="project-body">Se puso especial atención en la experiencia de usuario para visitantes que buscan apoyo de salud mental — navegación clara, tono visual cálido, acceso de baja barrera a información de contacto e ingreso. El sitio también cuenta con una sección de comercio electrónico para registro y pago de cursos, un blog para contenido psicoeducativo y una sección dedicada al programa de voluntariado con toda la información necesaria sobre logística, requisitos y ubicación.</p></div>
+  </section>
+
+  <section class="project-section">
+    <div class="container"><span class="section-label-text"><i>05</i> Estrategia de contenido y arquitectura de información</span><p class="project-body">La arquitectura de información fue diseñada para guiar a los diferentes perfiles de usuario a su destino en la menor cantidad de clics:</p><div class="project-list mt-4"><p><strong>Clientes potenciales de terapia</strong> — Landing → Sobre Georgina → Servicios → Agendar sesión</p><p><strong>Buscadores de cursos y diplomados</strong> — Página de educación → Detalles del programa → Registrarse/Pagar</p><p><strong>Solicitantes de voluntariado</strong> — Finca Raíces → Programa de voluntariado → Requisitos → Aplicar</p><p><strong>Participantes del programa comunitario</strong> — Inicio → Sanando en Comunidad → Unirse</p><p>Cada sección mantiene la identidad visual con gráficos personalizados, tipografía consistente y fotografía que refuerza los valores de marca: seguridad, crecimiento y conexión.</p></div></div>
+  </section>
+
+  <section class="project-section-alt">
+    <div class="container"><span class="section-label-text"><i>06</i> Guía de marca y entregables</span><p class="project-body">Se entregó un documento completo de guía de marca cubriendo todos los activos visuales y reglas de uso, permitiendo a Georgina y su equipo mantener consistencia de marca en todas las comunicaciones sin depender de un diseñador.</p></div>
+  </section>
+
+  <section class="project-result"><div class="container"><div class="result-box"><h2>Resultado</h2><p>Un ecosistema de marca cohesivo que abarca psicoterapia, educación, programas comunitarios y eco-voluntariado — unificado bajo una identidad visual que comunica seguridad, profundidad profesional y conexión humana auténtica. El sitio web funciona como centro neurálgico para todas las líneas de servicio, con caminos claros para cada tipo de usuario. La presencia en redes sociales mantiene reconocimiento de marca consistente a través de plataformas mientras permite flexibilidad para diferentes tipos de contenido. La marca logra tender un puente entre la psicología clínica y el crecimiento espiritual, posicionando a Raíces Universales como un espacio confiable, cálido y profesionalmente creíble para la salud mental y el desarrollo personal.</p></div></div></section>
+</BaseLayout>

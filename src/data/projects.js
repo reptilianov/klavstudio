@@ -8,6 +8,7 @@ export const allSlugs = [
 	'artearabia',
 	'babilonia',
 	'steps',
+	'raicesuniversales',
 ];
 
 export const thumbnails = {
@@ -19,6 +20,7 @@ export const thumbnails = {
 	artearabia: '/siteimages/artearabia.webp',
 	babilonia: '/siteimages/babilonia.webp',
 	steps: '/siteimages/steps.webp',
+	raicesuniversales: '/projects/raicesuniversales/RedesSociales_Enero-2022.jpg',
 };
 
 export const visibleSlugs = allSlugs.filter(
