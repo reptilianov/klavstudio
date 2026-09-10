@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { directions } from '../data/directions';
+import { thumbnails, visibleSlugs } from '../data/projects';
+import { getProjectImages } from '../data/project-images';
+import ProjectGallery from './ProjectGallery.astro';
+const { slug, locale } = Astro.props;
+const p = directions[slug];
+const c = p[locale];
+const es = locale === 'es';
+const next = visibleSlugs[(visibleSlugs.indexOf(slug) + 1) % visibleSlugs.length];
+const { cover, system, gallery } = await getProjectImages(slug, locale);
+---
+<BaseLayout locale={locale} title={p.name} description={c.title}>
+  <article class="case-study" style={`--project-color:${p.color};--project-bg:${p.bg}`}>
+    <header class="case-header container"><a class="text-link" href={`${es ? '/es/' : '/'}#projects`}>← {es ? 'Todos los proyectos' : 'All projects'}</a><div class="case-meta eyebrow"><span>{p.category}</span><span>{c.sector}</span></div><h1>{p.name}</h1><p class="case-headline">{c.title}</p></header>
+    <figure class="case-cover container"><img src={cover?.src || thumbnails[slug]} width="1200" height="900" alt={cover?.alt || `${p.name}: ${c.art}`} fetchpriority="high"/><figcaption>{cover?.comment || cover?.title || (es ? '01 / Dirección visual propuesta' : '01 / Proposed visual direction')}</figcaption></figure>
+    <section class="case-copy container"><span class="eyebrow">01 / {es ? 'Punto de partida' : 'Starting point'}</span><div><h2>{es ? 'El contexto.' : 'The context.'}</h2><p>{c.brief}</p></div></section>
+    <section class="case-idea"><div class="container"><span class="eyebrow">02 / {es ? 'La idea que lo conecta todo' : 'The connecting idea'}</span><h2>{c.idea}</h2><span class="concept-label">{es ? 'Evolución conceptual propuesta' : 'Proposed conceptual evolution'}</span></div></section>
+    <section class="case-copy container"><span class="eyebrow">03 / {es ? 'Sistema visual' : 'Visual system'}</span><div><h2>{es ? 'Carácter, con estructura.' : 'Character, with structure.'}</h2><p>{c.system}</p><div class="case-swatches">{[p.bg, p.color, '#f1eee6'].map(color => <div style={`background:${color};color:${color === p.bg ? '#fff' : '#171917'}`}><span>{color}</span></div>)}</div></div></section>
+    {system && <figure class="case-system container"><img src={system.src} width="1200" height="760" alt={system.alt || `${es ? 'Aplicaciones de' : 'Applications for'} ${p.name}`} loading="lazy"/><figcaption>{system.comment || system.title || (es ? '02 / Exploración de aplicaciones' : '02 / Application exploration')}</figcaption></figure>}
+    <section class="case-copy container"><span class="eyebrow">04 / {es ? 'En todos los puntos de contacto' : 'Across every touchpoint'}</span><div><h2>{es ? 'Una marca. Todo un universo.' : 'One brand. An entire universe.'}</h2><p>{c.application}</p><aside class="art-brief"><span class="eyebrow">{es ? 'Brief para las imágenes finales' : 'Final imagery brief'}</span><p>{c.art}</p></aside></div></section>
+    <ProjectGallery images={gallery} name={p.name} locale={locale} />
+    <section class="case-archive container"><div><span class="eyebrow">05 / {es ? 'Archivo original' : 'Original archive'}</span><h2>{es ? 'De dónde partimos.' : 'Where we started.'}</h2><p>{es ? 'Una pieza del material cargado del proyecto. La dirección presentada arriba es una propuesta de evolución, no evidencia de una nueva implementación.' : 'A piece from the existing project archive. The direction above is a proposed evolution, not evidence of a new implementation.'}</p></div><img src={thumbnails[slug]} alt={`${p.name} — ${es ? 'material original del proyecto' : 'original project material'}`} loading="lazy"/></section>
+    <a class="case-next container" href={`${es ? '/es' : ''}/project/${next}/`}><span class="eyebrow">{es ? 'Siguiente proyecto' : 'Next project'}</span><strong>{directions[next].name}</strong><span aria-hidden="true">↗</span></a>
+  </article>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from './ProjectCard.astro';
+import { visibleSlugs } from '../data/projects';
+const { locale } = Astro.props;
+const es = locale === 'es';
+const base = es ? '/es' : '';
+---
+<BaseLayout locale={locale}>
+  <section class="studio-hero container">
+    <div class="eyebrow"><span class="live-dot"></span> César Fernando / {es ? 'Diseñador independiente' : 'Independent designer'}</div>
+    <h1>{es ? 'Ideas claras.' : 'Clear ideas.'}<br/><span>{es ? 'Marcas que' : 'Brands that'}</span><br/><em>{es ? 'dejan huella.' : 'leave a mark.'}</em><span class="hero-star" aria-hidden="true">✳</span></h1>
+    <div class="hero-baseline"><p>{es ? 'Estrategia, identidad y experiencias digitales. Conecto lo que una marca es con todo lo que puede llegar a ser.' : 'Strategy, identity and digital experiences. Connecting what a brand is with everything it can become.'}</p><a class="text-link" href="#projects">{es ? 'Explorar proyectos' : 'Explore the work'} <span aria-hidden="true">↓</span></a></div>
+  </section>
+  <section id="projects" class="selected-work container">
+    <div class="section-heading"><div><span class="eyebrow">01 / {es ? 'Portafolio' : 'Portfolio'}</span><h2>{es ? 'Trabajo seleccionado' : 'Selected work'}<sup>({String(visibleSlugs.length).padStart(2, '0')})</sup></h2></div><p>{es ? 'Proyectos existentes. Nuevas posibilidades.' : 'Existing projects. New possibilities.'}</p></div>
+    <div class="work-grid">{visibleSlugs.map((slug, index) => <ProjectCard slug={slug} locale={locale} index={index}/>)}</div>
+    <p class="concept-note">{es ? 'Las imágenes son placeholders de dirección de arte. Los casos distinguen el contexto original de su evolución conceptual.' : 'Images are art-direction placeholders. Each case distinguishes the original context from its conceptual evolution.'}</p>
+  </section>
+  <section class="studio-statement"><div class="container statement-grid"><span class="eyebrow">02 / {es ? 'Enfoque' : 'Approach'}</span><div><h2>{es ? 'Una buena idea merece un sistema que la haga crecer.' : 'A good idea deserves a system that helps it grow.'}</h2><p>{es ? 'De la primera decisión de marca al último detalle de una interfaz. Pienso el conjunto y diseño las piezas para que todo tenga sentido.' : 'From the first brand decision to the last interface detail. I consider the whole and design the pieces so everything makes sense.'}</p><a class="text-link" href={es ? '/es/sobre-mi' : '/about'}>{es ? 'Conoce mi enfoque' : 'About my approach'} ↗</a></div></div></section>
+  <section class="studio-capabilities container"><div class="section-heading"><span class="eyebrow">03 / {es ? 'Lo que podemos construir' : 'What we can build'}</span></div>{[
+    ['01', es ? 'Estrategia e identidad' : 'Strategy & identity', es ? 'Posicionamiento, dirección de arte y sistemas de marca.' : 'Positioning, art direction and brand systems.'],
+    ['02', es ? 'Experiencias digitales' : 'Digital experiences', es ? 'Arquitectura, UX/UI y sitios que conectan forma y función.' : 'Architecture, UX/UI and websites connecting form and function.'],
+    ['03', es ? 'Sistemas de comunicación' : 'Communication systems', es ? 'Diseño editorial, presentaciones y contenido con un lenguaje propio.' : 'Editorial design, presentations and content with a distinct voice.']
+  ].map(([number, title, desc]) => <div class="capability-row"><span class="eyebrow">{number}</span><h3>{title}</h3><p>{desc}</p><span aria-hidden="true">↗</span></div>)}<a class="text-link capabilities-link" href={`${base}/${es ? 'servicios' : 'services'}`}>{es ? 'Ver servicios y alcances' : 'View services and scope'} ↗</a></section>
+  <section class="studio-contact container"><span class="eyebrow">{es ? '¿Qué tienes en mente?' : 'What do you have in mind?'}</span><h2>{es ? 'Hagamos algo' : 'Let’s make it'}<br/><em>{es ? 'que importe.' : 'mean something.'}</em></h2><a class="contact-pill" href="mailto:cefev.diseno@gmail.com">{es ? 'Cuéntame tu idea' : 'Tell me your idea'} <span aria-hidden="true">↗</span></a></section>
+</BaseLayout>

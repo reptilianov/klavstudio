@@ -1,0 +1,6 @@
+---
+interface Props { note: string; }
+const { note } = Astro.props;
+const isLocalhost = import.meta.env.DEV && ['localhost', '127.0.0.1', '::1'].includes(Astro.url.hostname);
+---
+{isLocalhost && <div class="design-todo"><span>PRODUCTION NOTE</span><strong>{note}</strong></div>}

@@ -1,7 +1,9 @@
 ---
 import '../styles/global.css';
+import '../styles/editorial.css';
 import { getTranslations } from '../i18n';
-import { allSlugs, thumbnails, visibleSlugs } from '../data/projects';
+import { directions } from '../data/directions';
+import { thumbnails, visibleSlugs } from '../data/projects';
 
 interface Props {
 	locale: 'en' | 'es';
@@ -12,7 +14,7 @@ interface Props {
 const { locale, title, description } = Astro.props;
 const t = getTranslations(locale);
 
-const navSlugs = allSlugs.filter((k) => k !== 'babilonia');
+const navSlugs = visibleSlugs;
 const currentSlug = Astro.url.pathname.match(/^\/(?:es\/)?project\/([^/]+)/)?.[1];
 const isProjectPage = !!currentSlug;
 const moreProjects = isProjectPage ? visibleSlugs.filter((s) => s !== currentSlug) : [];
@@ -60,7 +62,7 @@ const fullTitle = title
 		<link
 			rel="icon"
 			type="image/svg+xml"
-			href="/favicon.svg"
+			href="/favicon.webp"
 		/>
 		<link
 			rel="alternate"
@@ -87,6 +89,7 @@ const fullTitle = title
 	</head>
 
 	<body>
+        <a class="skip-link" href="#main-content">{locale === 'es' ? 'Saltar al contenido' : 'Skip to content'}</a>
 		<nav class="nav">
 			<div class="container nav-inner">
 				<a
@@ -95,8 +98,8 @@ const fullTitle = title
 					>KLAV</a
 				>
 				<div class="nav-links">
-					<div class="nav-dropdown">
-						<span class="nav-link nav-dropdown-trigger"
+					<details class="nav-dropdown">
+						<summary class="nav-link nav-dropdown-trigger"
 							>{locale === 'en' ? 'Projects' : 'Proyectos'}
 							<svg
 								class="dropdown-arrow"
@@ -110,19 +113,19 @@ const fullTitle = title
 									stroke-width="1.5"
 								></path>
 							</svg>
-						</span>
+						</summary>
 						<div class="nav-dropdown-menu">
 							{
 								navSlugs.map((key) => (
 									<a
 										href={`/${locale === 'en' ? 'project' : 'es/project'}/${key}`}
 										class="dropdown-item">
-										{t.projects[key]?.title}
+										{directions[key]?.name || t.projects[key]?.title}
 									</a>
 								))
 							}
 						</div>
-					</div>
+					</details>
 					<a
 						href={locale === 'en' ? '/services' : '/es/servicios'}
 						class="nav-link"
@@ -144,7 +147,7 @@ const fullTitle = title
 						>{locale === 'en' ? 'Contact' : 'Contacto'}</a
 					>
 					<a
-						href={locale === 'en' ? '/es' : '/'}
+						href={currentSlug ? `${locale === 'en' ? '/es' : ''}/project/${currentSlug}/` : (locale === 'en' ? '/es' : '/')}
 						class="nav-link lang-switch"
 						>{locale === 'en' ? 'ES' : 'EN'}</a
 					>
@@ -152,12 +155,12 @@ const fullTitle = title
 			</div>
 		</nav>
 
-		<main>
+		<main id="main-content">
 			<slot />
 		</main>
 
 		{
-			isProjectPage && moreProjects.length > 0 && (
+			isProjectPage && !visibleSlugs.includes(currentSlug) && moreProjects.length > 0 && (
 				<section class="more-projects">
 					<div class="container">
 						<h2 class="section-title scroll-fade">
@@ -193,17 +196,12 @@ const fullTitle = title
 
 		<footer class="footer">
 			<div class="container">
-				<p>&copy; {new Date().getFullYear()} KLAV. {t.site.tagline}.</p>
+				<p>&copy; {new Date().getFullYear()} KLAV. {locale === 'es' ? 'Estrategia, identidad y experiencias digitales.' : 'Strategy, identity and digital experiences.'}</p>
 				<div class="footer-links">
 					<a
 						href={t.contact.behanceUrl}
 						target="_blank"
 						>Behance</a
-					>
-					<a
-						href={t.contact.dribbbleUrl}
-						target="_blank"
-						>Dribbble</a
 					>
 					<a
 						href={t.contact.linkedinUrl}
@@ -215,7 +213,9 @@ const fullTitle = title
 		</footer>
 
 		<script>
-			function initAnimations() {
+			document.addEventListener('keydown', (event) => { if (event.key === 'Escape') document.querySelector('details.nav-dropdown')?.removeAttribute('open'); });
+            document.addEventListener('click', (event) => { const menu = document.querySelector('details.nav-dropdown'); if (event.target instanceof Node && !menu?.contains(event.target)) menu?.removeAttribute('open'); });
+            function initAnimations() {
 				const observer = new IntersectionObserver(
 					(entries) => {
 						entries.forEach((entry) => {

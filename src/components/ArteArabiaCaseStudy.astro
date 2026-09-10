@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const { locale = 'en' } = Astro.props;
+const es = locale === 'es';
+const posts = Array.from({ length: 27 }, (_, i) => i + 1).filter((n) => n !== 16);
+---
+
+<BaseLayout locale={locale} title="Arte Arabia">
+	<section class="project-hero">
+		<video autoplay loop muted playsinline class="hero-bg" style="object-fit:cover">
+			<source src="/projects/artearabia/perfumesArabes.mp4" type="video/mp4" />
+		</video>
+		<div class="hero-overlay artearabia-blur"></div>
+		<div class="container">
+			<div class="hero-content">
+				<a href={`${es ? '/es/' : '/'}#results`} class="back-link">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 10L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+					{es ? 'Volver' : 'Back'}
+				</a>
+				<h1 class="project-title">Arte Arabia</h1>
+				<p class="project-tagline">{es ? 'Tienda en línea WooCommerce con código 100% personalizado' : 'WooCommerce store with 100% custom code'}</p>
+				<p class="project-context">{es ? 'Actualmente gestiono sus redes sociales (Instagram y Facebook)' : 'Currently managing their social media (Instagram & Facebook)'}</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="project-section">
+		<div class="container">
+			<span class="section-label-text"><i>01</i> {es ? 'Problema' : 'Problem'}</span>
+			<p class="project-body">
+				{es
+					? 'Arte Arabia es una tienda que vende artículos de Arabia, Marruecos, Turquía, Persia, Palestina, Emiratos y otros rincones de Oriente Medio: decoración, inciensos, perfumes, joyería, moda y regalos. Necesitaban un sitio web transaccional que reflejara la riqueza visual de sus productos, funcionara como catálogo y tienda en línea, y representara la identidad de sus tiendas físicas en Querétaro y Guadalajara. La mayoría de los temas comerciales disponibles no lograban capturar la estética oriental que la marca requería.'
+					: 'Arte Arabia is a store selling items from Arabia, Morocco, Turkey, Persia, Palestine, the Emirates and other corners of the Middle East: decor, incense, perfumes, jewelry, fashion and gifts. They needed a transactional website that reflected the visual richness of their products, functioned as both catalog and online store, and represented the identity of their physical locations in Querétaro and Guadalajara. Most off-the-shelf themes failed to capture the Middle Eastern aesthetic the brand required.'}
+			</p>
+			<div class="project-tags">
+				{['WordPress', 'WooCommerce', 'PHP', 'UI/UX', 'Social Media', 'Video'].map((tag) => <span class="tag">{tag}</span>)}
+			</div>
+
+			<span class="section-label-text mb-4 mt-5">{es ? 'Posts para redes sociales' : 'Social media posts'}</span>
+			<div class="project-grid-3 artearabia-posts">
+				{posts.map((n) => <img src={`/projects/artearabia/${n}.jpg`} alt={`Post ${n}`} class="img-fluid" loading="lazy" />)}
+			</div>
+
+			<span class="section-label-text mb-4 mt-5">{es ? 'Videos promocionales' : 'Promotional videos'}</span>
+			<div id="artearabia-videos" class="project-grid-3 artearabia-videos">
+				{['v3.mp4', 'v2.mp4', 'v4.mp4'].map((file, i) => (
+					<video controls preload="none" data-play-order={i + 1} class="img-fluid video-seq"><source src={`/projects/artearabia/${file}`} type="video/mp4" /></video>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="project-section-alt artearabia-system">
+		<video autoplay loop muted playsinline class="system-bg"><source src="/projects/artearabia/inciensos.mp4" type="video/mp4" /></video>
+		<div class="system-blur"></div>
+		<div class="container system-content">
+			<div class="system-copy">
+				<span class="section-label-text"><i>02</i> {es ? 'Sistema y Enfoque' : 'System & Approach'}</span>
+				<p class="project-body">{es ? 'Se construyó un sitio WordPress + WooCommerce con tema 100% personalizado — sin comprar un theme de Envato ni usar plantillas prefabricadas. Cada línea de código fue escrita a la medida para reflejar la identidad visual de la marca.' : 'A WordPress + WooCommerce site was built with a 100% custom theme — no theme purchased from Envato and no prefabricated templates. Every line of code was written to order to reflect the brand’s visual identity.'}</p>
+				<p class="project-body">{es ? 'El sitio maneja catálogo completo con categorías como Moda, Inciensos & Aromas, Anillos & Joyería, Perfumes árabes, Hogar y Regalos. Incluye pagos seguros con Stripe (Visa, Mastercard), atención personalizada por WhatsApp y Facebook, y sincronización con dos tiendas físicas.' : 'The site handles a full catalog with categories including Fashion, Incense & Aromas, Rings & Jewelry, Arabic Perfumes, Home and Gifts. It includes secure payments via Stripe (Visa, Mastercard), personalized attention through WhatsApp and Facebook, and synchronization with two physical stores.'}</p>
+				<p class="project-body">{es ? 'Además del sitio web, se diseñaron publicaciones para redes sociales que mantienen la identidad visual en Instagram y Facebook, promocionando productos y colecciones.' : 'In addition to the website, social media posts were designed to maintain visual identity on Instagram and Facebook, promoting products and collections.'}</p>
+				<div class="project-process artearabia-deliverables"><strong>{es ? 'Entregables:' : 'Deliverables:'}</strong> {es ? 'sitio web transaccional + contenido para redes sociales' : 'transactional website + social media content'}</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="project-gallery">
+		<div class="container">
+			<span class="section-label-text mb-4">{es ? 'Sitio web — Capturas de pantalla' : 'Website — Screenshots'}</span>
+			<img src="/projects/artearabia/FireShot Capture 373 - Homepage - Arte Arabia Tienda - [artearabia.com].png" alt="Arte Arabia homepage" class="img-fluid artearabia-site-shot" loading="lazy" />
+			<img src="/projects/artearabia/FireShot Capture 374 - Anillos, Pulseras y bisurería archivos - Arte Arabia Tienda_ - [artearabia.com].png" alt="Arte Arabia category page" class="img-fluid artearabia-site-shot" loading="lazy" />
+		</div>
+	</section>
+
+	<section class="project-result"><div class="container"><div class="result-box">
+		<h2>{es ? 'Resultado' : 'Result'}</h2>
+		<p>{es ? 'Tienda en línea completamente funcional con código 100% personalizado que refleja fielmente la identidad de la marca. Integración de pagos Stripe, atención multicanal (WhatsApp, Facebook), y presencia coordinada entre tiendas físicas y sitio web. Catálogo digital de cientos de productos con navegación intuitiva y estética oriental auténtica.' : 'Fully functional online store with 100% custom code that faithfully reflects the brand identity. Stripe payment integration, multi-channel attention (WhatsApp, Facebook), and coordinated presence between physical stores and website. Digital catalog of hundreds of products with intuitive navigation and authentic Middle Eastern aesthetic.'}</p>
+	</div></div></section>
+
+	<section class="project-section"><div class="container">
+		<span class="section-label-text"><i>03</i> {es ? 'Aprendizajes' : 'Learnings'}</span>
+		<p class="project-body">{es ? 'El comercio electrónico con WooCommerce permite total libertad creativa cuando se escribe código personalizado. Los temas prefabricados limitan la identidad de marca. Construir desde cero requiere más trabajo pero el resultado es un sitio que realmente representa al negocio. Además, el contenido para redes sociales extendió la identidad visual más allá del sitio web, creando una experiencia de marca consistente en todos los canales.' : 'WooCommerce e-commerce allows total creative freedom when custom code is written. Prefabricated themes limit brand identity. Building from scratch requires more work but the result is a site that truly represents the business. Social media content extended the visual identity beyond the website, creating a consistent brand experience across all channels.'}</p>
+	</div></section>
+</BaseLayout>
+
+<style>
+	.artearabia-blur, .system-blur { backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
+	.artearabia-posts img { width: 100%; border-radius: 8px; }
+	.artearabia-videos video { width: 100%; border-radius: 12px; }
+	.artearabia-system { position: relative; overflow: hidden; }
+	.system-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+	.system-blur { position: absolute; inset: 0; z-index: 1; }
+	.system-content { position: relative; z-index: 2; }
+	.system-copy { background: rgba(0,0,0,.65); padding: 2rem; border-radius: 12px; }
+	.artearabia-deliverables { background: rgba(0,0,0,.7); color: #f5f5f5; }
+	.artearabia-site-shot { width: 100%; border-radius: 12px; margin-bottom: 2rem; }
+	.tag { color: black; }
+</style>
+
+<script is:inline>
+	const container = document.getElementById('artearabia-videos');
+	if (container) {
+		const videos = [...container.querySelectorAll('.video-seq')].sort((a, b) => +a.dataset.playOrder - +b.dataset.playOrder);
+		const observer = new IntersectionObserver(([entry]) => {
+			if (!entry.isIntersecting) return;
+			observer.disconnect();
+			let index = 0;
+			const playNext = () => {
+				if (index >= videos.length) return;
+				const video = videos[index++];
+				video.currentTime = 0;
+				video.play().catch(() => {});
+				video.onended = playNext;
+			};
+			playNext();
+		}, { threshold: 0.5 });
+		observer.observe(container);
+	}
+</script>

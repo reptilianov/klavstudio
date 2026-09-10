@@ -1,0 +1,191 @@
+.okx {
+  --ink: #030510;
+  --acid: #00ddff;
+  --blue: #0074ff;
+  --violet: #7f2fea;
+  --magenta: #ef36c9;
+  --orange: #ff7849;
+  --paper: #f1eee6;
+  --line: rgba(3, 5, 16, .2);
+}
+
+.okx-hero h1 em {
+  color: transparent;
+  background: linear-gradient(90deg, var(--cyan, #00ddff), var(--blue), var(--violet), var(--magenta), var(--orange));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.okx-tag,
+.concept-chip {
+  border-color: #7f2fea;
+}
+
+.okx-asset {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: clamp(24px, 4vw, 64px);
+  background: #030510;
+}
+
+.okx-asset img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 58vw;
+  max-height: none;
+  object-fit: cover;
+}
+
+.okx-asset-hero img {
+  min-height: min(74vw, 1080px);
+}
+
+.okx-asset-stage img,
+.okx-asset-final img {
+  min-height: min(67vw, 1024px);
+}
+
+.okx-asset figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 22px;
+  color: #f1eee6;
+  background: linear-gradient(180deg, transparent, rgba(3,5,16,.92));
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+.system-board {
+  background: #070914;
+  color: #f1eee6;
+  border: 1px solid #24283b;
+}
+
+.system-board .type-spec,
+.system-board .status-set span {
+  border-color: #2e334c;
+}
+
+.system-board .type-spec span {
+  font-weight: 700;
+  line-height: .9;
+  background: linear-gradient(180deg, #00ddff, #7f2fea 55%, #ff7849);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.system-board .colors {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.status-set .status-operational i { background: #36e6a6; }
+.status-set .status-active i { background: #00ddff; }
+.status-set .status-deploying i { background: #7f2fea; }
+.status-set .status-warning i { background: #ff7849; }
+
+.ia-map {
+  background: #e8e5dc;
+}
+
+.ia-map .intent b {
+  color: #6b2bd1;
+}
+
+.dashboard,
+.motion-stage {
+  background: #030510;
+}
+
+.dashboard {
+  border: 1px solid #25293c;
+}
+
+.dashboard nav,
+.dash-status,
+.dash-grid article,
+.motion-track i {
+  border-color: #2d3248;
+}
+
+.dashboard button {
+  color: white;
+  background: linear-gradient(90deg, #7f2fea, #ef36c9, #ff7849);
+}
+
+.dashboard i,
+.motion-track b {
+  background: #00ddff;
+}
+
+.motion-track strong {
+  color: #00ddff;
+}
+
+.motion-track i:after {
+  background: linear-gradient(90deg, #00ddff, #0074ff, #7f2fea, #ef36c9, #ff7849);
+}
+
+.communications {
+  background: #0b0d18;
+}
+
+.communications .report {
+  background: #030510;
+  border: 1px solid #2d3248;
+}
+
+.communications .campaign {
+  color: white;
+  background: linear-gradient(145deg, #0074ff, #7f2fea 52%, #ef36c9, #ff7849);
+}
+
+.archive {
+  background: #d7d5cd;
+}
+
+.archive-grid img {
+  filter: none;
+}
+
+.final-status i,
+.dashboard .dash-status i,
+.dashboard .dash-grid i {
+  background: #00ddff;
+}
+
+@media (max-width: 800px) {
+  .okx-asset img,
+  .okx-asset-hero img,
+  .okx-asset-stage img,
+  .okx-asset-final img {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .okx-asset {
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .okx-asset figcaption {
+    position: static;
+    padding: 14px 18px;
+    font-size: 10px;
+  }
+
+  .okx-asset figcaption span:last-child {
+    display: none;
+  }
+
+  .system-board .colors {
+    grid-template-columns: 1fr 1fr;
+  }
+}

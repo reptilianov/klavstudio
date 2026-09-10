@@ -1,0 +1,37 @@
+---
+interface GalleryImage {
+  src: string;
+  stem: string;
+  title: string;
+  comment: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+interface Props { images: GalleryImage[]; name: string; locale: 'es' | 'en'; }
+const { images, name, locale } = Astro.props;
+const es = locale === 'es';
+---
+{images.length > 0 && <section class="project-development container" aria-label={es ? 'Desarrollo del proyecto' : 'Project development'}>
+  <div class="development-heading"><span class="eyebrow">{es ? 'Desarrollo / Detalles y aplicaciones' : 'Development / Details and applications'}</span><h2>{es ? 'El proyecto, en detalle.' : 'The project, in detail.'}</h2></div>
+  {images.map((image, index) => <figure class="development-figure">
+    <figcaption>
+      <span class="eyebrow development-number">{String(index + 1).padStart(2, '0')}</span>
+      <div>{image.title && <h3>{image.title}</h3>}{image.comment && <p>{image.comment}</p>}{!image.title && !image.comment && <span class="eyebrow">{name} / {es ? 'Detalle del proyecto' : 'Project detail'}</span>}</div>
+    </figcaption>
+    <img src={image.src} width={image.width} height={image.height} alt={image.alt || image.title || `${name} — ${es ? 'detalle' : 'detail'} ${index + 1}`} loading="lazy" decoding="async" />
+  </figure>)}
+</section>}
+<style>
+  .project-development { padding-block: 0 80px; }
+  .development-heading { border-top: 1px solid var(--color-border); padding-top: 28px; margin-bottom: 42px; }
+  .development-heading h2 { font-weight: 400; letter-spacing: -.04em; margin-top: 18px; }
+  .development-figure + .development-figure { margin-top: 55px; }
+  .development-figure figcaption { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 0 0 22px; text-transform: none; letter-spacing: normal; }
+  .development-number { color: var(--project-color); }
+  .development-figure h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 400; color: var(--color-text); letter-spacing: -.03em; }
+  .development-figure p { font-size: 16px; line-height: 1.8; margin-top: 12px; max-width: 760px; white-space: pre-line; }
+  .development-figure p:first-child { margin-top: 0; }
+  .development-figure img { width: 100%; height: auto; background: var(--project-bg); }
+  @media (max-width: 768px) { .project-development { padding-bottom: 50px; } .development-figure figcaption { grid-template-columns: 28px 1fr; gap: 12px; } }
+</style>
