@@ -12,15 +12,15 @@ export const allSlugs = [
 ];
 
 export const thumbnails = {
-	okhosting: '/siteimages/Okhosting.webp',
-	firstchoice: '/siteimages/firstchoice.webp',
-	caintra: '/siteimages/caintra.webp',
-	mindsherpa: '/siteimages/mindsherpa.webp',
-	airtm: '/siteimages/airtm.webp',
-	artearabia: '/siteimages/artearabia.webp',
+	okhosting: '/siteimages/thumbnail_okhosting.webp',
+	firstchoice: '/siteimages/thumbnail_firstchoice.webp',
+	caintra: '/siteimages/thumbnail_caintra.webp',
+	mindsherpa: '/siteimages/thumbnail_mindsherpa.webp',
+	airtm: '/siteimages/thumbnail_airtm.webp',
+	artearabia: '/siteimages/thumbnail_artearabia.webp',
 	babilonia: '/siteimages/babilonia.webp',
-	steps: '/siteimages/steps.webp',
-	raicesuniversales: '/projects/raicesuniversales/RedesSociales_Enero-2022.jpg',
+	steps: '/siteimages/thumbnail_steps.webp',
+	raicesuniversales: '/siteimages/thumbnail_raicesuniversales.webp',
 };
 
 export const visibleSlugs = allSlugs.filter(

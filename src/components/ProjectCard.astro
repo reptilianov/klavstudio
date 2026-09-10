@@ -1,15 +1,13 @@
 ---
 import { directions } from '../data/directions';
-import { getProjectImages } from '../data/project-images';
 import { thumbnails } from '../data/projects';
 const { slug, locale = 'es', index = 0 } = Astro.props;
 const p = directions[slug];
 const copy = p[locale];
-const { cover } = await getProjectImages(slug, locale);
 ---
 <a class="work-card" href={`${locale === 'es' ? '/es' : ''}/project/${slug}/`} style={`--project-color:${p.color};--project-bg:${p.bg}`}>
   <div class="work-art">
-    <img src={cover?.src || thumbnails[slug]} width="1200" height="900" alt={cover?.alt || `${p.name} — ${locale === 'es' ? 'dirección visual conceptual' : 'conceptual visual direction'}`} loading="lazy" />
+    <img src={thumbnails[slug]} width="1200" height="900" alt={`${p.name} — ${locale === 'es' ? 'imagen del proyecto' : 'project image'}`} loading="lazy" />
     <span class="work-index">{String(index + 1).padStart(2, '0')} / KLAV</span>
     <span class="work-open" aria-hidden="true">↗</span>
     <span class="work-status">{locale === 'es' ? 'Dirección conceptual' : 'Concept direction'}</span>
