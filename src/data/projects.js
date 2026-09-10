@@ -1,4 +1,5 @@
 export const allSlugs = [
+	'armadillo-crates',
 	'okhosting',
 	'firstchoice',
 	'caintra',
@@ -12,6 +13,7 @@ export const allSlugs = [
 ];
 
 export const thumbnails = {
+	'armadillo-crates': '/siteimages/thumbnail_armadillo-crates.webp',
 	okhosting: '/siteimages/thumbnail_okhosting.webp',
 	firstchoice: '/siteimages/thumbnail_firstchoice.webp',
 	caintra: '/siteimages/thumbnail_caintra.webp',
