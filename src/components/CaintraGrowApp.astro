@@ -1,0 +1,111 @@
+---
+import '../styles/caintra-grow.css';
+
+const { locale = 'en' } = Astro.props;
+const es = locale === 'es';
+const growRoot = '/projects/caintra/appGrow/finales/';
+const summary = es
+  ? 'UNA APP.<br/><em>DOS VARIANTES.</em><br/>UN MISMO RECORRIDO.'
+  : 'ONE APP.<br/><em>TWO VARIANTS.</em><br/>ONE SHARED JOURNEY.';
+
+const tecMty = [
+  ['AppMTY-login.webp', 'LOGIN / WELCOME'],
+  ['AppMTY-datosDeLaCuenta.webp', 'ACCOUNT DATA'],
+  ['AppMTY-Listadedesafios.webp', 'CHALLENGE LIST'],
+  ['AppMTY-evaluacion.webp', 'EVALUATION'],
+];
+
+const tecMilenio = [
+  ['App-Tecmilenio-BIENVENIDOSCREENINICIAL.png', 'WELCOME / HOME'],
+  ['App-Tecmilenio-BENEFICIOS.webp', 'BENEFITS'],
+  ['App-Tecmilenio-EVALUACION.webp', 'EVALUATION'],
+  ['App-Tecmilenio-MANUALESYGUIAS.webp', 'MANUALS & GUIDES'],
+  ['App-Tecmilenio-PREGUNTASFRECUENTES.webp', 'FREQUENTLY ASKED QUESTIONS'],
+];
+---
+
+<section id="grow-app" class="ct-section ct-wrap ct-grow-intro">
+  <b>00</b>
+  <div>
+    <small>FEATURED / GROW APPLICATION</small>
+    <span class="ct-badge">Original professional work</span>
+    <h2>{es ? 'Una aplicación. Dos expresiones universitarias.' : 'One application. Two university expressions.'}</h2>
+    <p>{es
+      ? 'GROW extiende la experiencia de Practicantes CAINTRA hacia estudiantes y universidades. La aplicación conecta perfiles, desafíos, evaluaciones y recursos para acompañar el desarrollo profesional. El mismo producto se adaptó en dos variantes institucionales: Tecnológico de Monterrey y Universidad Tecmilenio.'
+      : 'GROW extends the Practicantes CAINTRA experience to students and universities. The application connects profiles, challenges, evaluations and resources supporting professional development. The same product was adapted into two institutional variants: Tecnológico de Monterrey and Universidad Tecmilenio.'}</p>
+    <div class="grow-source-links">
+      <a href="https://apps.apple.com/mx/app/caintra-grow/id6462309016" target="_blank" rel="noopener noreferrer">APP STORE ↗</a>
+      <a href="https://www.caintra.org.mx/reticula-transforma/plataforma-grow-construye-un-semillero-de-talento-desde-tu-programa-de-practicas-profesionales/" target="_blank" rel="noopener noreferrer">CAINTRA / GROW ↗</a>
+    </div>
+  </div>
+</section>
+
+<div class="grow-variant-hero ct-wide">
+  <figure>
+    <img src={`${growRoot}AppMTY-login.webp`} width="1448" height="1086" alt="GROW app login adapted for Tecnológico de Monterrey" fetchpriority="high" />
+    <figcaption><b>TEC DE MONTERREY</b><span>BLUE VARIANT / STUDENT ACCESS</span></figcaption>
+  </figure>
+  <div>
+    <small>SHARED PRODUCT</small>
+    <h2>PROFILE<br />CHALLENGES<br />EVALUATION<br />RESOURCES</h2>
+    <i>× 02</i>
+  </div>
+  <figure>
+    <img src={`${growRoot}App-Tecmilenio-BIENVENIDOSCREENINICIAL.png`} width="1448" height="1086" alt="GROW app welcome screen adapted for Universidad Tecmilenio" fetchpriority="high" />
+    <figcaption><b>TECMILENIO</b><span>GREEN VARIANT / STUDENT ACCESS</span></figcaption>
+  </figure>
+</div>
+
+<section class="grow-shared-system ct-wide">
+  <header><span>ONE INFORMATION ARCHITECTURE</span><strong>TWO BRANDED VARIANTS</strong></header>
+  <div>
+    {[
+      ['01', 'IDENTITY', 'Institution logo, color and campaign language'],
+      ['02', 'NAVIGATION', 'Consistent access to the core experience'],
+      ['03', 'CONTENT', 'Institution-specific programs and resources'],
+      ['04', 'WORKFLOW', 'Profile, challenges, evaluation and support'],
+    ].map(([number, title, copy]) => (
+      <article><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>
+    ))}
+  </div>
+</section>
+
+<section class="grow-variant ct-wide tec-mty">
+  <header>
+    <div><small>VARIANT 01 / ORIGINAL PROFESSIONAL WORK</small><h2>TEC DE<br />MONTERREY</h2></div>
+    <p>{es
+      ? 'Una variante azul organiza el recorrido alrededor de datos de cuenta, lista de desafíos y evaluación. La estructura permanece compacta y operativa mientras adopta los códigos visuales de la institución.'
+      : 'A blue variant organizes the experience around account data, challenge lists and evaluation. The structure remains compact and operational while adopting the institution’s visual codes.'}</p>
+  </header>
+  <div>
+    {tecMty.map(([file, label], index) => (
+      <figure class:list={{ feature: index === 0 }}>
+        <img src={`${growRoot}${file}`} width="1448" height="1086" alt={`GROW Tecnológico de Monterrey — ${label}`} loading="lazy" />
+        <figcaption><span>0{index + 1}</span><b>{label}</b></figcaption>
+      </figure>
+    ))}
+  </div>
+</section>
+
+<section class="grow-variant ct-wide tec-milenio">
+  <header>
+    <div><small>VARIANT 02 / ORIGINAL PROFESSIONAL WORK</small><h2>TEC<br />MILENIO</h2></div>
+    <p>{es
+      ? 'La variante verde amplía el sistema con una bienvenida editorial, beneficios, evaluación, manuales y preguntas frecuentes. La identidad cambia; la lógica de producto sigue siendo reconocible.'
+      : 'The green variant expands the system through an editorial welcome, benefits, evaluation, manuals and frequently asked questions. Identity changes while the product logic remains recognizable.'}</p>
+  </header>
+  <div>
+    {tecMilenio.map(([file, label], index) => (
+      <figure class:list={{ feature: index === 0 }}>
+        <img src={`${growRoot}${file}`} width="1448" height="1086" alt={`GROW Universidad Tecmilenio — ${label}`} loading="lazy" />
+        <figcaption><span>0{index + 1}</span><b>{label}</b></figcaption>
+      </figure>
+    ))}
+  </div>
+</section>
+
+<div class="grow-app-summary ct-wide">
+  <small>CAINTRA GROW / APP ECOSYSTEM</small>
+  <h2 set:html={summary} />
+  <div><span>STUDENT PROFILE</span><span>CHALLENGES</span><span>EVALUATION</span><span>GUIDES</span><span>SUPPORT</span></div>
+</div>
