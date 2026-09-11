@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import DesignTodo from './DesignTodo.astro';
 import '../styles/armadillo-crates.css';
 const { locale = 'en' } = Astro.props;
 const es = locale === 'es';
 const root = es ? '/es/' : '/';
 const A = '/projects/armadillo-crates/';
 const img = (n) => `${A}armadillo-crates-${String(n).padStart(2,'0')}.webp`;
+const visualForSection = [9,10,3,3,3,5,5,3,5,2,2,5,11,12,11,11,3,5,11,10,9];
 const t = (en,spa) => es ? spa : en;
 const capabilities = ['Product Strategy','Information Architecture','UX / UI','Content Design','E-commerce','Service Design','Operations','Full-stack Development'];
 const sections = [
@@ -32,19 +32,18 @@ const sections = [
   ['EVOLUTION',t('The strongest product decisions came from operating the service.','Las decisiones más fuertes surgieron de operar el servicio.'),t('Real launch questions became product rules: mixed zones, extensions, email resends, test-order reporting and the exact information a driver needs at the door.','Preguntas reales de lanzamiento se volvieron reglas: zonas mixtas, extensiones, reenvíos, reportes sin órdenes de prueba y la información exacta que necesita un conductor.')],
   ['REFLECTION',t('Designing the reservation is only part of designing the rental.','Diseñar la reservación es solo parte de diseñar la renta.'),t('Convenience has to survive the whole journey. Armadillo Crates explains a new behavior, helps customers select confidently, protects pricing and payment, guides fulfillment and creates a durable operational record.','La conveniencia debe sobrevivir todo el recorrido. Armadillo Crates explica un comportamiento nuevo, ayuda a elegir, protege precio y pago, guía la operación y crea un registro durable.')],
 ];
-const todos = ['service journey','three-step service model','crate versus cardboard comparison','bundle and booking architecture','quick quote handoff','bundle selection','delivery and pickup dates','Houston service area','live quote summary','Stripe checkout','confirmation states','rental extension flow','operations dashboard','driver mobile flow','customer and operations email','coupons and sales reporting','product design system','responsive workflow sequence','service architecture','product evolution timeline','final service ecosystem'];
 ---
 <BaseLayout locale={locale} title="Armadillo Crates" description="Reusable moving box rentals in Houston — one connected booking and operations service.">
 <article class="ac">
   <header class="ac-hero ac-wrap"><a class="ac-back" href={`${root}#projects`}>← {t('All projects','Todos los proyectos')}</a><div class="ac-top"><span>ARMADILLO CRATES / REUSABLE MOVING BOX RENTALS</span><span>HOUSTON, TEXAS / 2026</span></div><h1>{t('Moving without the cardboard ritual.','Mudarte sin el ritual del cartón.')}</h1><div class="ac-intro"><p>{t('Clean, reusable plastic crates arrive ready to pack, move on dollies and are collected when the job is done.','Cajas plásticas limpias y reutilizables llegan listas para empacar, se mueven sobre dollies y se recogen al terminar.')}</p><p>{t('The public website, booking experience and operational tools turn that promise into a working service—from quote to payment, delivery, pickup and reporting.','El sitio público, la reservación y las herramientas operativas convierten esa promesa en servicio: de cotización y pago a entrega, recolección y reportes.')}</p></div><span class="ac-badge">LIVE PRODUCT / 2026</span></header>
-  <div class="ac-hero-visual ac-wide"><DesignTodo note="CÉSAR: reemplazar aquí hero Armadillo Crates — homepage + booking + operations"/><img src={img(1)} alt="Armadillo Crates placeholder — replace with connected service hero"/><div><b>DELIVER.</b><b>MOVE.</b><b>PICK UP.</b><b>REPEAT.</b></div></div>
+  <div class="ac-hero-visual ac-wide"><img src={img(9)} alt={t('Reusable moving crates delivered to a Houston home','Entrega de cajas reutilizables en una casa de Houston')}/><div><b>DELIVER.</b><b>MOVE.</b><b>PICK UP.</b><b>REPEAT.</b></div></div>
 
   {sections.map(([label,heading,body],i) => <>
     <section class="ac-section ac-wrap"><span class="ac-num">{String(i+1).padStart(2,'0')}</span><div><small>{String(i+1).padStart(2,'0')} / {label}</small><h2>{heading}</h2><p>{body}</p>{i===20&&<div class="ac-capabilities">{capabilities.map(x=><span>{x}</span>)}</div>}</div></section>
-    {i===0 ? <div class="ac-journey ac-wide">{['MOVE SIZE','BUNDLE','DATES','LOCATIONS','PAYMENT','DELIVERY','PICKUP'].map((x,j)=><div><span>0{j+1}</span><b>{x}</b></div>)}<DesignTodo note={`CÉSAR: reemplazar aquí ${todos[i]} con capturas Armadillo Crates`}/></div> :
-    i===1 ? <div class="ac-three ac-wide">{[['01','WE DELIVER'],['02','YOU MOVE'],['03','WE PICK UP']].map(x=><article><span>{x[0]}</span><h3>{x[1]}</h3><p>NO TAPE. NO CARDBOARD. NO PROBLEM.</p></article>)}<DesignTodo note={`CÉSAR: reemplazar aquí ${todos[i]} con capturas Armadillo Crates`}/></div> :
-    i===3 ? <div class="ac-flow ac-wide">{['01 BUNDLE','02 DATES','03 LOCATIONS','04 ADD-ONS','05 DETAILS'].map(x=><b>{x}</b>)}<DesignTodo note={`CÉSAR: reemplazar aquí ${todos[i]} con capturas Armadillo Crates`}/></div> :
-    i===5 ? <div class="ac-bundles ac-wide">{[['STUDIO','20'],['STANDARD','35'],['FAMILY','50'],['ESTATE','75']].map((x,j)=><article class:list={{active:j===1}}><small>{j===1?'RECOMMENDED':'MOVE BUNDLE'}</small><h3>{x[0]}</h3><strong>{x[1]}</strong><span>CRATES / 7 DAYS</span></article>)}<DesignTodo note={`CÉSAR: reemplazar aquí ${todos[i]} con capturas Armadillo Crates`}/></div> :
+    {i===0 ? <div class="ac-journey ac-wide">{['MOVE SIZE','BUNDLE','DATES','LOCATIONS','PAYMENT','DELIVERY','PICKUP'].map((x,j)=><div><span>0{j+1}</span><b>{x}</b></div>)}</div> :
+    i===1 ? <figure class="ac-asset ac-wide"><img src={img(10)} alt={t('Delivery, packing and pickup with reusable moving crates','Entrega, empaque y recolección con cajas reutilizables')}/><figcaption><span>SERVICE MODEL</span><b>DELIVER / MOVE / PICK UP</b></figcaption></figure> :
+    i===3 ? <div class="ac-flow ac-wide">{['01 BUNDLE','02 DATES','03 LOCATIONS','04 ADD-ONS','05 DETAILS'].map(x=><b>{x}</b>)}</div> :
+    i===5 ? <div class="ac-bundles ac-wide">{[['STUDIO','20'],['STANDARD','35'],['FAMILY','50'],['ESTATE','75']].map((x,j)=><article class:list={{active:j===1}}><small>{j===1?'RECOMMENDED':'MOVE BUNDLE'}</small><h3>{x[0]}</h3><strong>{x[1]}</strong><span>CRATES / 7 DAYS</span></article>)}</div> :
     i===7 ? <div class="ac-zone-logic ac-wide" role="img" aria-label={t('Zone eligibility and pricing calculation flow','Flujo de elegibilidad y cálculo de tarifa por zona')}>
       <header><small>SERVER-SIDE PRICING RULE / HOUSTON SERVICE AREA</small><strong>ZONE FEE = MAX(<i>DELIVERY ZIP FEE</i>, <i>PICKUP ZIP FEE</i>)</strong></header>
       <div class="ac-zone-inputs"><article><span>01</span><small>DELIVERY ZIP</small><b>77002</b><em>ZONE 1 / $0</em></article><i>+</i><article><span>02</span><small>PICKUP ZIP</small><b>77095</b><em>ZONE 3 / $29</em></article></div>
@@ -54,10 +53,10 @@ const todos = ['service journey','three-step service model','crate versus cardbo
       <div class="ac-zone-arrow" aria-hidden="true">↓</div>
       <footer><div><small>06 / QUOTE BREAKDOWN</small><b>ZONE FEE</b><strong>+$29</strong></div><span>→</span><div><small>07 / SERVER RECALCULATION</small><b>TAX + TOTAL</b><strong>RECALCULATED</strong></div><span>→</span><div class="result"><small>08 / BEFORE PAYMENT</small><b>FINAL PRICE</b><strong>$218.34</strong></div></footer>
     </div> :
-    i===8 ? <div class="ac-quote ac-wide"><div><small>YOUR MOVE</small><h3>STANDARD / 35 CRATES</h3><span>DELIVERY / HOUSTON ZONE 02</span><span>RENTAL / 7 DAYS</span></div><aside>{[['SUBTOTAL','$189.00'],['DISCOUNT','− $20.00'],['SALES TAX','$13.94'],['TOTAL','$182.94']].map(x=><p><span>{x[0]}</span><b>{x[1]}</b></p>)}</aside><DesignTodo note={`CÉSAR: reemplazar aquí ${todos[i]} con captura real anonimizada`}/></div> :
-    i===12 ? <div class="ac-states ac-wide">{['AWAITING PAYMENT','CONFIRMED','SCHEDULED','OUT FOR DELIVERY','DELIVERED','PICKUP SCHEDULED','PICKED UP','CLOSED'].map((x,j)=><div><span>{String(j+1).padStart(2,'0')}</span><b>{x}</b></div>)}<DesignTodo note={`CÉSAR: reemplazar aquí ${todos[i]} con capturas Armadillo Crates`}/></div> :
-    i===18 ? <div class="ac-architecture ac-wide"><b>CUSTOMER</b><i>→</i><b>ASTRO</b><i>→</i><b>PAGES FUNCTIONS</b><i>→</i><div><span>D1</span><span>STRIPE</span><span>RESEND</span></div><i>→</i><div><span>ADMIN</span><span>DRIVER</span></div><DesignTodo note={`CÉSAR: reemplazar aquí ${todos[i]} con arquitectura final`}/></div> :
-    <figure class="ac-asset ac-wide"><img src={img((i%8)+1)} alt={`Armadillo Crates ${label.toLowerCase()} placeholder copied from 1st Choice — replace this file`}/><figcaption><span>{label}</span><b>ARMADILLO CRATES / REPLACE WITH REAL ANONYMIZED CAPTURE</b></figcaption><DesignTodo note={`CÉSAR: reemplazar aquí ${todos[i]} con capturas Armadillo Crates`}/></figure>}
+    i===8 ? <div class="ac-quote ac-wide"><div><small>YOUR MOVE</small><h3>STANDARD / 35 CRATES</h3><span>DELIVERY / HOUSTON ZONE 02</span><span>RENTAL / 7 DAYS</span></div><aside>{[['SUBTOTAL','$189.00'],['DISCOUNT','− $20.00'],['SALES TAX','$13.94'],['TOTAL','$182.94']].map(x=><p><span>{x[0]}</span><b>{x[1]}</b></p>)}</aside></div> :
+    i===12 ? <div class="ac-states ac-wide">{['AWAITING PAYMENT','CONFIRMED','SCHEDULED','OUT FOR DELIVERY','DELIVERED','PICKUP SCHEDULED','PICKED UP','CLOSED'].map((x,j)=><div><span>{String(j+1).padStart(2,'0')}</span><b>{x}</b></div>)}</div> :
+    i===18 ? <div class="ac-architecture ac-wide"><b>CUSTOMER</b><i>→</i><b>ASTRO</b><i>→</i><b>PAGES FUNCTIONS</b><i>→</i><div><span>D1</span><span>STRIPE</span><span>RESEND</span></div><i>→</i><div><span>ADMIN</span><span>DRIVER</span></div></div> :
+    <figure class="ac-asset ac-wide"><img src={img(visualForSection[i])} alt={`${label} — Armadillo Crates`}/><figcaption><span>{label}</span><b>ARMADILLO CRATES / CONNECTED RENTAL SERVICE</b></figcaption></figure>}
   </>)}
   <footer class="ac-final ac-wide"><small>ONE CONNECTED RENTAL SERVICE</small><h2>DELIVER.<br/>MOVE.<br/><em>PICK UP.</em><br/>REPEAT.</h2><span>HOUSTON / TEXAS / 2026</span></footer>
   <a class="ac-next ac-wrap" href={`${root}project/okhosting/`}><span>NEXT PROJECT</span><strong>OK Hosting</strong><b>↗</b></a>
